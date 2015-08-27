@@ -1,0 +1,36 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+#tabpanels-contents-box{
+	border-width:0!important;
+	margin:0!important}
+
+#tabstrip-box{
+	border:2px solid;
+	-moz-border-top-colors:ThreeDShadow ThreeDDarkShadow;
+	-moz-border-left-colors:ThreeDShadow ThreeDDarkShadow;
+	-moz-border-right-colors:ThreeDHighLight ThreeDShadow;
+	-moz-border-bottom-colors:ThreeDHighLight ThreeDShadow;
+	background-color:rgba(160,160,160,.2)}
+
+#user-list-box,
+#browser-box{
+	border-width:0!important}
+
+.output-container{
+	margin:0!important;
+	border:2px solid!important;
+	-moz-border-top-colors:ThreeDShadow ThreeDDarkShadow!important;
+	-moz-border-left-colors:ThreeDShadow ThreeDDarkShadow!important;
+	-moz-border-bottom-colors:ThreeDHighLight ThreeDShadow!important;
+	border-right:0!important}
+
+.view-button{
+	min-width:15ex;
+	text-align:start!important;
+	list-style-image:url(chrome://global/skin/leds.png);
+	-moz-image-region:rect(0,32px,16px,16px)}
+.view-button[state="activity"]{-moz-image-region:rect(0,64px,16px,48px)}
+.view-button[state="attention"]{color:darkred;-moz-image-region:rect(0,16px,16px,0)}
+.view-button[state="superfluous"]{color:darkblue;-moz-image-region:rect(0,48px,16px,32px)}
+#status-progress-bar{margin:0 2px}
+#view-tabs{margin-top:-2px}

@@ -1,0 +1,94 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+menulist{
+	vertical-align:middle;
+	-moz-box-pack:center;
+	margin:2px;
+	padding:0;
+	border:2px solid;
+	-moz-border-top-colors:threedshadow threedhighlight;
+	-moz-border-left-colors:threedshadow threedhighlight;
+	-moz-border-right-colors:threeddarkshadow threedshadow;
+	-moz-border-bottom-colors:threeddarkshadow threedshadow;
+	background:-moz-Dialog url(chrome://global/skin/menu-bg.png);
+	color:-moz-DialogText}
+caption>menulist{margin:0 -1px}
+
+toolbar>menulist:not(.devtools-menulist),
+toolbar>*>menulist{
+	-moz-border-right-colors:threedhighlight threedshadow;
+	-moz-border-bottom-colors:threedhighlight threedshadow;
+	background:none}
+
+menulist:focus{
+	box-shadow:0 0 0 2px #CCCCFF!important}
+
+menulist:hover:not([disabled="true"]):not([droppable="false"]):not([editable="true"]){
+	-moz-border-right-colors:threeddarkshadow threedshadow;
+	-moz-border-bottom-colors:threeddarkshadow threedshadow;
+	background:#CCCCFF url(chrome://global/skin/menu-bg.png);
+	color:black}
+menulist:hover:not(:focus):not([disabled="true"]):not([droppable="false"]):not([editable="true"]){
+	box-shadow:1px 1px 2px threedshadow}
+
+menulist[selected="true"]{
+	font-weight:bold!important}
+
+.menulist-label-box{
+	-moz-box-align:center}
+
+.menulist-icon{
+	padding:1px}
+
+.menulist-label{
+	padding:0!important;
+	margin:1px!important}
+
+.menulist-description{
+	font-style:italic;
+	color:GrayText;
+	-moz-padding-start:1ex!important}
+
+.menulist-dropmarker{
+	border:0!important;
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(72px 82px 82px 72px);
+	padding:1px;
+	-moz-padding-start:2px;
+	-moz-box-pack:center;
+	-moz-box-align:center;
+	background:threedshadow url(chrome://global/skin/menu-bg.png)}
+menulist:hover:not([disabled="true"])>.menulist-dropmarker{
+	background-color:threeddarkshadow}
+menulist[open="true"]>.menulist-dropmarker{
+	-moz-image-region:rect(72px 92px 82px 82px)}
+
+.menulist-compact{
+	margin:0;
+	border:1px outset threedface}
+
+menulist[editable="true"]{
+	-moz-border-top-colors:ThreeDShadow ThreeDDarkShadow;
+	-moz-border-left-colors:ThreeDShadow ThreeDDarkShadow;
+	-moz-border-right-colors:ThreeDHighLight ThreeDShadow;
+	-moz-border-bottom-colors:ThreeDHighLight ThreeDShadow;
+	background:-moz-Field none;
+	color:-moz-FieldText}
+
+menulist[disabled="true"]{
+	color:graytext!important;
+	text-shadow:1px 1px 1px threedhighlight!important}
+
+html|*.menulist-editable-input{
+	-moz-appearance:none;
+	background:none;
+	border:0;
+	margin:1px;
+	padding:0;
+	color:inherit;
+	font:inherit;
+	text-shadow:inherit}
+
+html|*.menulist-editable-input:focus{
+	outline:1px solid #9999CC}

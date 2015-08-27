@@ -1,0 +1,29 @@
+@import url(chrome://global/skin/htmlbutton.css);
+
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+html|link{display:none}
+
+*|*:root{
+	margin:0;
+	-moz-appearance:none;
+	font:message-box;
+	background-image:url(chrome://global/skin/gecko.png),-moz-linear-gradient(-moz-Dialog,graytext 200%)!important;
+	background-repeat:no-repeat,repeat;
+	background-position:right 90%,left top;
+	background-attachment:fixed,fixed;
+	color:-moz-DialogText}
+
+html|body{margin:0}
+
+*|*.main-content{
+	border-radius:18px;
+	border:2px solid;
+	-moz-border-top-colors:threedshadow threedhighlight;
+	-moz-border-left-colors:threedshadow threedhighlight;
+	-moz-border-right-colors:threeddarkshadow threedshadow;
+	-moz-border-bottom-colors:threeddarkshadow threedshadow;
+	box-shadow:5px 5px 5px graytext;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}

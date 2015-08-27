@@ -1,0 +1,91 @@
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+html|input[type="submit"],
+html|button{
+	-moz-appearance:none!important;
+	font:message-box;
+	margin:2px;
+	padding:1px;
+	outline-color:transparent;
+	border-radius:5px;
+	background-clip:padding-box;
+	transition-property:background,border,color,box-shadow;
+	transition-duration:150ms;
+	border:2px solid;
+	-moz-border-top-colors:threedshadow threedhighlight;
+	-moz-border-left-colors:threedshadow threedhighlight;
+	-moz-border-right-colors:threeddarkshadow threedshadow;
+	-moz-border-bottom-colors:threeddarkshadow threedshadow;
+	background:buttonface url(chrome://global/skin/menu-bg.png);
+	color:buttontext}
+
+html|input[type="submit"]:hover:not([disabled="true"]),
+html|button:hover:not([disabled="true"]){
+	border:2px solid;
+	-moz-border-top-colors:threedshadow threedhighlight;
+	-moz-border-left-colors:threedshadow threedhighlight;
+	-moz-border-right-colors:threeddarkshadow threedshadow;
+	-moz-border-bottom-colors:threeddarkshadow threedshadow;
+	box-shadow:1px 1px 2px graytext;
+	background-color:#CCCCFF;
+	color:black}
+
+html|input[type="submit"]:focus,
+html|button:focus{
+	box-shadow:0 0 1px 2px #CCCCFF!important}
+
+html|input[type="submit"][default],
+html|button[default]{
+	font-weight:bold}
+
+html|input[type="submit"]:hover:active:not([disabled="true"]),
+html|button:hover:active:not([disabled="true"]){
+	box-shadow:inset 1px 1px 1px threedshadow;
+	-moz-border-top-colors:threeddarkshadow threedshadow;
+	-moz-border-left-colors:threeddarkshadow threedshadow;
+	-moz-border-right-colors:threedhighlight threedshadow;
+	-moz-border-bottom-colors:threedhighlight threedshadow;
+	background-color:highlight;
+	color:highlighttext}
+
+html|input[type="submit"][checked="true"],
+html|button[checked="true"]{
+	box-shadow:inset 1px 1px 1px threedshadow;
+	-moz-border-top-colors:threedshadow;
+	-moz-border-left-colors:threedshadow;
+	-moz-border-right-colors:threeddarkshadow threedhighlight;
+	-moz-border-bottom-colors:threeddarkshadow threedhighlight;
+	background:buttonface url(chrome://global/skin/highlight.png)}
+
+html|input[type="submit"][disabled="true"],
+html|button[disabled="true"]{
+	-moz-border-top-colors:threedshadow threedhighlight!important;
+	-moz-border-left-colors:threedshadow threedhighlight!important;
+	-moz-border-right-colors:threedshadow threedshadow!important;
+	-moz-border-bottom-colors:threedshadow threedshadow!important;
+	background:ButtonFace none!important;
+	color:graytext!important;
+	text-shadow:1px 1px 1px threedhighlight}
+
+#closeButton,#btnCloseSidebar,#allow-button,
+html|input[type="submit"][value="OK"],
+html|input[type="submit"][value="Cancel"],#errorCancel,
+#btnTryAgain,#errorTryAgain,#restart-button{
+	-moz-padding-start:18px;
+	background-repeat:no-repeat,repeat!important;
+	background-position:2px center,left top!important}
+#closeButton:-moz-locale-dir(rtl),#btnCloseSidebar:-moz-locale-dir(rtl),#allow-button:-moz-locale-dir(rtl),
+html|input[type="submit"][value="OK"]:-moz-locale-dir(rtl),
+html|input[type="submit"][value="Cancel"]:-moz-locale-dir(rtl),#errorCancel:-moz-locale-dir(rtl),
+#btnTryAgain:-moz-locale-dir(rtl),#errorTryAgain:-moz-locale-dir(rtl){
+	background-position:right center,right top}
+
+#closeButton,#btnCloseSidebar,#allow-button,
+html|input[type="submit"][value="OK"]{
+	background-image:-moz-image-rect(url(chrome://global/skin/global.png),0,16,16,0),url(chrome://global/skin/menu-bg.png)}
+html|input[type="submit"][value="Cancel"],#errorCancel{
+	background-image:-moz-image-rect(url(chrome://global/skin/global.png),16,16,32,0),url(chrome://global/skin/menu-bg.png)}
+#errorTryAgain{/*needs to be separate*/
+	background-image:-moz-image-rect(url(chrome://global/skin/global.png),128,16,144,0),url(chrome://global/skin/menu-bg.png)}
+#btnTryAgain,#restart-button{
+	background-image:-moz-image-rect(url(chrome://global/skin/global.png),128,16,144,0),url(chrome://global/skin/menu-bg.png)}

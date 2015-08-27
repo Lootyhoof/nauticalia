@@ -1,0 +1,39 @@
+#domainTree{
+	border-bottom-width:0}
+#tabbox{
+	border-width:0;
+	border-radius:0;
+	padding:0}
+#tabbox>tabs{
+	border-width:2px 0 0 2px;
+	border-style:solid;
+	border-top-left-radius:11px;
+	-moz-border-top-colors:threedshadow ThreeDDarkShadow;
+	-moz-border-left-colors:threedshadow ThreeDDarkShadow;
+	box-shadow:inset 0 -2px 2px threedshadow;
+	background:-moz-Dialog url(chrome://global/skin/toolbar-bg.png);
+	color:-moz-DialogText}
+#tabpanels{
+	border-width:0;
+	padding:4px 0 0 0}
+#permList{
+	overflow:auto}
+.hostLabel{
+	width:30em;
+	font-weight:bold;
+	-moz-margin-end:1em}
+.permissionLabel{
+	width:10em}
+#cookieRemove,#prefsRemove,#pwdRemove,#forgetButton,#fdataRemove,
+#domain-context-forget,#cookies-context-remove,#prefs-context-remove,
+#pwd-context-remove,#fdata-context-remove{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(272px,16px,288px,0)}
+.permission{
+	background:none!important;
+	color:inherit!important;
+	border:0!important;
+	margin:0!important;
+	padding:0!important;
+	-moz-box-orient:horizontal!important;
+	-moz-box-align:center!important}

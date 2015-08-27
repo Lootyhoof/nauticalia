@@ -1,0 +1,59 @@
+@import url(chrome://os/skin/scrollbars.css);
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+scrollbar{
+	-moz-binding:url(chrome://global/content/bindings/scrollbar.xml#scrollbar);
+	background-color:-moz-Dialog;
+	cursor:default}
+scrollbar[orient="horizontal"]{
+	min-height:14px;
+	border-top:1px inset threedface}
+scrollbar[orient="vertical"]{
+	min-width:14px;
+	border-left:1px inset threedface}
+scrollbar[orient="vertical"]:-moz-locale-dir(rtl){
+	border-right:0;
+	border-right:1px inset threedface}
+
+slider{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAgCAYAAAAi7kmXAAAAQ0lEQVR42mNgYGAwFhAQMADSykAsA8SiQMxvb2/P8///f2kgVgJibSC2BeJQIE4F4jSGUY2jGkc1jmoc1TiqcfhqBAAAIw4OCdQjAgAAAABJRU5ErkJggg==)}
+slider[orient="horizontal"]{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAOCAYAAABO3B6yAAAAWElEQVR42sXOMQ2AUAwG4X/v+hyUkYkNEiYcsIAGJGCC4KZWnppCVdwl335qrV0k/R0oM9tJkrTBNMM0otx9ICkiJpJ67wtJmbmSauAk1cBNqoGHVAMv6QPI8ByupeSBbQAAAABJRU5ErkJggg==)}
+
+thumb{
+	min-width:12px;
+	min-height:12px;
+	background:-moz-Dialog url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAgBAMAAADUNYSZAAAAJFBMVEXx8fHv7+/t7e3p6eng4ODQ0NCAgIBRUVE9PT0xMTEpKSkjIyPgHyHwAAAADHRSTlOFdmRSOiYOFh0kKzLbkNjKAAAAH0lEQVR4Xt3FQQEAAAwBwC2LLLLIIouSenjdPShnlgLwFUCBWO7a0wAAAABJRU5ErkJggg==);
+	border:1px outset threedface}
+thumb[orient="horizontal"]{
+	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAMBAMAAADxOqKKAAAAJFBMVEXx8fHv7+/t7e3p6eng4ODQ0NCAgIBRUVE9PT0xMTEpKSkjIyPgHyHwAAAADHRSTlOFdmRSOiYOFh0kKzLbkNjKAAAAEElEQVQIHWNhQAMsgkNWAABfSwDs994hJAAAAABJRU5ErkJggg==)}
+
+scrollbarbutton{
+	width:14px;
+	height:14px;
+	background:-moz-Dialog url(chrome://global/skin/scrollbuttons.png) no-repeat;
+	border:1px outset threedface}
+
+thumb:hover,
+scrollbarbutton:hover{
+	background-color:#CCCCFF}
+thumb:active,
+scrollbarbutton:hover:active,
+scrollbarbutton[active="true"]{
+	background-color:highlight;
+	border-color:threedshadow threedface threedface threedshadow}
+thumb[disabled="true"],
+scrollbarbutton[disabled="true"]{
+	background-color:-moz-Dialog!important}
+thumb:focus,
+scrollbarbutton:focus{
+	border:1px solid highlight!important}
+
+scrollbarbutton[type="decrement"]{background-position:0 0}
+scrollbarbutton[type="increment"]{background-position:0 -12px}
+scrollbarbutton[type="decrement"][sborient="vertical"]{background-position:-12px 0}
+scrollbarbutton[type="increment"][sborient="vertical"]{background-position:-12px -12px}
+
+scrollcorner{
+	background:-moz-Dialog url(chrome://global/skin/menu-bg.png);
+	-moz-binding:url(chrome://global/content/bindings/scrollbar.xml#scrollbar-base);
+	cursor:default}

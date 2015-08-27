@@ -1,0 +1,83 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+tabbox{
+	border:2px solid;
+	border-radius:7px 7px 0 0;
+	-moz-border-top-colors:ThreeDShadow ThreeDDarkShadow;
+	-moz-border-left-colors:ThreeDShadow ThreeDDarkShadow;
+	-moz-border-right-colors:ThreeDHighLight ThreeDShadow;
+	-moz-border-bottom-colors:ThreeDHighLight ThreeDShadow}
+
+tabs{
+	border-radius:inherit;
+	background-image:-moz-linear-gradient(threedshadow -200%,-moz-dialog 150%)}
+
+.tabs-left,.tabs-right{
+	min-width:3px;
+	border-bottom:1px solid threedhighlight}
+.tabs-bottom>.tabs-left,.tabs-bottom>.tabs-right{
+	border-bottom:0;
+	border-top:1px solid threedshadow}
+
+tabpanels{
+	padding:2px;
+	-moz-border-start:1px solid threedhighlight}
+
+tabbox>tabpanels:first-child{
+	border-top:1px solid threedhighlight}
+
+tab{
+	border-radius:9px 9px 0 0;
+	margin-top:5px;
+	box-shadow:0 -1px 1px threedshadow;
+	border:1px solid ThreeDHighLight;
+	-moz-border-end-color:threedshadow;
+	padding:2px 3px 0 3px;
+	background:threedface url(chrome://global/skin/menu-bg.png)}
+
+tab:hover:not([selected="true"]):not([disabled="true"]){
+	margin-top:3px;
+	padding-bottom:2px;
+	background-color:#CCCCFF;
+	color:black}
+
+tab[selected="true"]{
+	margin-top:3px;
+	padding-top:1px;
+	padding-bottom:3px;
+	border-bottom-color:-moz-Dialog;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+
+tab[disabled="true"]{
+	color:graytext;
+	text-shadow:1px 1px 1px threedhighlight}
+
+.tab-bottom{
+	border-radius:0 0 9px 9px;
+	border-color:threedshadow;
+	-moz-border-start-color:threedhighlight;
+	margin:0 0 5px 0!important;
+	padding:0 3px 2px 3px!important}
+.tab-bottom:hover:not([selected="true"]){
+	margin-bottom:3px!important;
+	padding-top:2px!important}
+.tab-bottom[selected="true"]{
+	margin-bottom:2px!important;
+	padding-top:3px!important;
+	padding-bottom:1px!important;
+	border-radius:0 0 7px 7px;
+	border-top-color:-moz-Dialog}
+
+/*TABMIXPLUS*/
+.groupbox-panels{
+	-moz-appearance:none!important;
+	padding:0!important}
+tabpanels#tabpanId tabbox[value]{
+	width:400px;
+	padding:0!important;
+	border:2px solid!important;
+	-moz-border-top-colors:ThreeDShadow ThreeDDarkShadow!important;
+	-moz-border-left-colors:ThreeDShadow ThreeDDarkShadow!important;
+	-moz-border-right-colors:ThreeDHighLight ThreeDShadow!important;
+	-moz-border-bottom-colors:ThreeDHighLight ThreeDShadow!important}

@@ -1,0 +1,7 @@
+@media not print{
+body{background-color:threedshadow}
+video{
+	box-shadow:2px 2px 15px threeddarkshadow,2px 2px 4px threeddarkshadow;
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
+}

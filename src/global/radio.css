@@ -1,0 +1,128 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+radiogroup{margin:1px}
+
+radio{
+	outline-width:0!important;
+	border:1px solid transparent;
+	background-size:contain;
+	background-clip:padding-box;
+	padding:1px;
+	-moz-box-align:center}
+
+.radio-icon{list-style-image:inherit}
+.radio-label{
+	margin:0;
+	-moz-margin-start:2px;
+	padding:1px}
+
+radio[focused="true"]{
+	box-shadow:0 0 0 2px #CCCCFF!important}
+radio:hover:not([selected="true"]):not([disabled="true"]){
+	border-color:threedhighlight threedshadow threedshadow threedhighlight;
+	background:#CCCCFF url(chrome://global/skin/menu-bg.png);
+	color:black}
+radio:hover:active:not([selected="true"]):not([disabled="true"]){
+	border-color:threedshadow threedhighlight threedhighlight threedshadow;
+	background-color:Highlight;
+	color:HighlightText}
+radio:hover:not([selected="true"]):not([disabled="true"]):not(:active){
+	box-shadow:1px 1px 2px threedshadow}
+
+radio[disabled="true"]{
+	color:graytext!important;
+	text-shadow:1px 1px 1px threedhighlight}
+
+.radio-check{
+	margin:2px;
+	-moz-margin-end:1px;
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(12px 24px 24px 12px)}
+.radio-check[selected="true"]{-moz-image-region:rect(12px 12px 24px 0)}
+.radio-check[disabled="true"]{-moz-image-region:rect(24px 24px 36px 12px)}
+.radio-check[selected="true"][disabled="true"]{-moz-image-region:rect(24px 12px 36px 0)}
+
+#viewGroup:focus{outline:0!important}
+
+.paneSelector>radio,
+#viewGroup>radio{
+	-moz-box-align:center!important;
+	-moz-box-pack:end;
+	min-width:50px;
+	margin:1px;
+	padding:2px;
+	border-radius:5px!important}
+.paneSelector>radio{
+	-moz-box-orient:vertical!important}
+.viewButtonLabel{margin:0 2px}
+.paneSelector>radio:hover:not([selected="true"]),
+#viewGroup>radio:hover:not([selected="true"]){
+	background-image:url(chrome://global/skin/toolbar-bg.png)}
+.paneSelector>radio:hover:active:not([selected="true"]),
+#viewGroup>radio:hover:active:not([selected="true"]){
+	box-shadow:inset 1px 1px 3px threeddarkshadow}
+#viewGroup>radio[selected="true"],
+.paneSelector>radio[selected="true"]{
+	border:1px inset threedface!important;
+	box-shadow:inset 1px 1px 1px threedshadow!important;
+	background:-moz-dialog url(chrome://global/skin/highlight.png)!important;
+	color:-moz-DialogText!important}
+.paneSelector:focus>radio[selected="true"],
+#viewGroup>radio[selected="true"][focused="true"]{
+	box-shadow:inset 1px 1px 1px threedshadow,0 0 1px 2px #CCCCFF!important}
+
+radiogroup[orient="horizontal"]{margin:2px}
+
+radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane]){
+	border-radius:0;
+	-moz-padding-end:3px;
+	border-width:2px!important;
+	-moz-border-top-colors:threedshadow threedhighlight;
+	-moz-border-left-colors:threedshadow threedhighlight;
+	-moz-border-right-colors:threedhighlight threedshadow;
+	-moz-border-bottom-colors:threedhighlight threedshadow;
+	background-image:url(chrome://global/skin/menu-bg.png);
+	background-size:contain}
+
+radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane]):first-of-type:-moz-locale-dir(ltr),
+radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane]):last-of-type:-moz-locale-dir(rtl){
+	border-radius:5px 0 0 5px}
+radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane]):last-of-type:-moz-locale-dir(ltr),
+radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane]):first-of-type:-moz-locale-dir(rtl){
+	border-radius:0 5px 5px 0}
+
+radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane]):not(:last-of-type):-moz-locale-dir(ltr),
+radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane]):not(:first-of-type):-moz-locale-dir(rtl){
+	-moz-border-right-colors:threedshadow transparent}
+radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane]):not(:first-of-type):-moz-locale-dir(ltr),
+radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane]):not(:last-of-type):-moz-locale-dir(rtl){
+	-moz-border-left-colors:threedhighlight transparent}
+
+radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane]):not([disabled="true"]):not([selected="true"]):hover{
+	-moz-border-right-colors:threeddarkshadow threedshadow; 
+	-moz-border-bottom-colors:threeddarkshadow threedshadow}
+
+radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane]):not([disabled="true"]):not([selected="true"]):hover:active{
+	-moz-border-top-colors:threedshadow threeddarkshadow!important;
+	-moz-border-left-colors:threedshadow threeddarkshadow!important;
+	-moz-border-right-colors:threedhighlight threedshadow!important;
+	-moz-border-bottom-colors:threedhighlight threedshadow!important}
+
+radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane])[selected="true"]{
+	box-shadow:1px 1px 2px threedshadow inset;
+	-moz-border-top-colors:threedshadow!important;
+	-moz-border-left-colors:threedshadow!important;
+	-moz-border-right-colors:threedhighlight!important;
+	-moz-border-bottom-colors:threedhighlight!important;
+	box-shadow:1px 1px 2px threedshadow inset!important;
+	background:transparent url(chrome://global/skin/highlight.png)!important;
+	color:-moz-DialogText!important}
+
+radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane])[selected="true"]:-moz-locale-dir(rtl){
+	-moz-border-right-colors:threedshadow threedshadow!important;
+	-moz-border-left-colors:threedhighlight threedhighlight!important;
+	box-shadow:-1px 1px 2px threedface inset,-1px 1px 1px threedshadow inset}
+radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane])[selected="true"][focused="true"]{
+	box-shadow:0 0 1px 2px #CCCCFF,1px 1px 2px threedshadow inset!important}
+radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane])[selected="true"][focused="true"]:-moz-locale-dir(rtl){
+	box-shadow:0 0 1px 2px #CCCCFF,-11px 1px 2px threedshadow inset!important}

@@ -1,0 +1,19 @@
+.options-vertical-pane{
+	margin:10px;
+	width:calc(50% - 20px);
+	min-width:280px}
+
+.options-vertical-pane>label{
+	margin:2px 0;
+	padding:2px 5px;
+	font-weight:bold;
+	border-radius:7px;
+	border:1px outset threedface;
+	box-shadow:1px 1px 2px threedshadow}
+
+.options-groupbox{padding:4px}
+
+#toolbox-tab-options>image{
+	background-image:-moz-image-rect(url(chrome://global/skin/global.png),96,16,112,0);
+	width:16px;
+	height:16px}

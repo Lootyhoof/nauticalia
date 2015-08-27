@@ -1,0 +1,57 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+colorpicker[type="button"]{
+	-moz-appearance:none!important;
+	outline-color:transparent;
+	width:28px;
+	height:24px;
+	border:2px solid;
+	margin:2px;
+	-moz-border-top-colors:ThreeDShadow ThreeDHighLight;
+	-moz-border-left-colors:ThreeDShadow ThreeDHighLight;
+	-moz-border-right-colors:ThreeDDarkShadow ThreeDShadow;
+	-moz-border-bottom-colors:ThreeDDarkShadow ThreeDShadow;
+	background:url(chrome://global/skin/menu-bg.png)}
+colorpicker:focus{
+	outline:2px solid #9999CC;
+	-moz-outline-radius:3px}
+colorpicker:hover{
+	background-color:#CCCCFF}
+colorpicker:hover:active{
+	-moz-border-top-colors:threedshadow;
+	-moz-border-left-colors:threedshadow;
+	-moz-border-right-colors:ThreeDDarkShadow ThreeDHighLight;
+	-moz-border-bottom-colors:ThreeDDarkShadow ThreeDHighLight;
+	background-color:darkblue}
+.colorpicker-button-colorbox{
+	margin:2px;
+	border:1px inset threedface}
+.colorpicker-button-menupopup{
+	border:2px solid;
+	-moz-border-top-colors:ThreeDShadow ThreeDHighLight;
+	-moz-border-left-colors:ThreeDShadow ThreeDHighLight;
+	-moz-border-right-colors:ThreeDDarkShadow ThreeDShadow;
+	-moz-border-bottom-colors:ThreeDDarkShadow ThreeDShadow}
+
+.colorpickertile{
+	width:24px;
+	height:20px;
+	border:0}
+.colorpickertile[hover="true"]{
+	border:2px solid;
+	-moz-border-top-colors:ThreeDHighLight ThreeDFace;
+	-moz-border-left-colors:ThreeDHighLight ThreeDFace;
+	-moz-border-right-colors:ThreeDDarkShadow ThreeDShadow;
+	-moz-border-bottom-colors:ThreeDDarkShadow ThreeDShadow}
+.colorpickertile[selected="true"]{
+	border:3px solid;
+	-moz-border-top-colors:ThreeDShadow ThreeDDarkShadow white;
+	-moz-border-left-colors:ThreeDShadow ThreeDDarkShadow white;
+	-moz-border-right-colors:ThreeDHighLight ThreeDHighLight white;
+	-moz-border-bottom-colors:ThreeDHighLight ThreeDHighLight white}
+.cp-light[selected="true"]{
+	border:3px solid;
+	-moz-border-top-colors:ThreeDShadow ThreeDDarkShadow black;
+	-moz-border-left-colors:ThreeDShadow ThreeDDarkShadow black;
+	-moz-border-right-colors:ThreeDHighLight ThreeDHighLight black;
+	-moz-border-bottom-colors:ThreeDHighLight ThreeDHighLight black}

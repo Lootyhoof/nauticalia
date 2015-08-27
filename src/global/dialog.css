@@ -1,0 +1,13 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+dialogheader{
+	background-image:url(chrome://global/skin/toolbar-bg.png);
+	margin:0;
+	padding:2px;
+	font-weight:bold;
+	text-shadow:0 1px rgba(250,250,250,.8)}
+.dialogheader-title{
+	margin:2px;
+	font-size:120%}
+.dialogheader-description{
+	margin:2px}	

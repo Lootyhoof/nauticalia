@@ -1,0 +1,53 @@
+#orientation{
+	outline-color:transparent}
+#orientation:focus{
+	outline:1px solid #9999CC;
+	-moz-outline-radius:7px}
+
+.portrait-page,
+.landscape-page{
+	padding:1px 2px;
+	outline:0!important;
+	border-width:2px!important;
+	-moz-border-top-colors:threedshadow threedhighlight!important;
+	-moz-border-left-colors:threedshadow threedhighlight!important;
+	-moz-border-right-colors:threedhighlight threedshadow!important;
+	-moz-border-bottom-colors:threedhighlight threedshadow!important;
+	background-image:url(chrome://global/skin/menu-bg.png);
+	background-size:cover;
+	list-style-image:url(chrome://global/skin/widgets.png)}
+
+.portrait-page:not([selected="true"]):hover,
+.landscape-page:not([selected="true"]):hover{
+	-moz-border-right-colors:threeddarkshadow threedshadow!important; 
+	-moz-border-bottom-colors:threeddarkshadow threedshadow!important}
+
+.portrait-page:not([selected="true"]):hover:active,
+.landscape-page:not([selected="true"]):hover:active{
+	-moz-border-top-colors:threeddarkshadow threedshadow!important;
+	-moz-border-left-colors:threeddarkshadow threedshadow!important;
+	-moz-border-right-colors:threedshadow threeddarkshadow!important;
+	-moz-border-bottom-colors:threedshadow threeddarkshadow!important}
+
+.portrait-page{
+	-moz-image-region:rect(56px 85px 72px 70px);
+	border-radius:5px 0 0 5px!important;
+	border-right-width:1px!important;
+	-moz-border-right-colors:threedshadow!important}
+.landscape-page{
+	-moz-image-region:rect(56px 101px 72px 85px);
+	margin-left:0!important;
+	border-radius:0 5px 5px 0!important;
+	border-left-width:1px!important;
+	-moz-border-left-colors:threedhighlight!important}
+
+.portrait-page[selected="true"],
+.landscape-page[selected="true"]{
+	box-shadow: 1px 1px 2px threedface inset, 1px 1px 1px threedshadow inset;
+	background-image:url(chrome://global/skin/highlight.png);
+	-moz-border-top-colors:threedshadow threedshadow!important;
+	-moz-border-left-colors:threedshadow threedshadow!important;
+	-moz-border-right-colors:threedhighlight threedhighlight!important;
+	-moz-border-bottom-colors:threedhighlight threedhighlight!important}
+
+.radio-check{display:none}

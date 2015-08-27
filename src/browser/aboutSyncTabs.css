@@ -1,0 +1,77 @@
+#tabs-display{
+	-moz-box-pack:center;
+	-moz-box-align:center;
+	background-image:url(chrome://global/skin/gecko.png),-moz-linear-gradient(-moz-Dialog,graytext 200%)!important;
+	background-repeat:no-repeat,repeat;
+	background-position:right 90%,left top;
+	background-attachment:fixed,fixed;
+	color:-moz-DialogText}
+
+#tabsList{
+	margin:10px 0;
+	border-radius:18px;
+	border:2px solid!important;
+	-moz-border-top-colors:threedshadow threedhighlight!important;
+	-moz-border-left-colors:threedshadow threedhighlight!important;
+	-moz-border-right-colors:threeddarkshadow threedshadow!important;
+	-moz-border-bottom-colors:threeddarkshadow threedshadow!important;
+	box-shadow:5px 5px 5px graytext;
+	background:-moz-Dialog;
+	color:-moz-DialogText}
+
+#headers{
+	max-width:50em;
+	border-radius:16px 16px 0 0;
+	border-bottom:1px solid threedshadow;
+	padding:8px;
+	background-image:-moz-image-rect(url(chrome://browser/skin/preferences/preferences.png),216,24,240,0),url(chrome://global/skin/toolbar-bg.png);
+	background-repeat:no-repeat,repeat;
+	background-position:left center,left top;
+	background-origin:content-box,padding-box}
+#headers:-moz-locale-dir(rtl){
+	background-position:top right}
+
+#tabsListHeading{
+	font-size:140%;
+	font-weight:bold;
+	-moz-margin-start:28px}
+
+richlistitem[type="tab"]{
+	margin:2px 4px;
+	border-radius:6px;
+	background-image:url(chrome://global/skin/toolbar-bg.png);
+	box-shadow:1px 1px 1px threedshadow}
+
+richlistitem[type="tab"][selected="true"]{
+	background-color:highlight;
+	color:highlighttext}
+
+richlistitem[type="client"]{
+	margin:2px 4px;
+	text-shadow:none;
+	-moz-user-focus:ignore!important;
+	max-width:50em;
+	font-weight:600;
+	list-style-image:url(chrome://browser/skin/icons.png);
+	-moz-image-region:rect(0,32px,16px,16px);
+	border-width:0!important;
+	background:none!important;
+	color:inherit!important}
+richlistitem.desktop[type="client"]{
+	-moz-image-region:rect(0,48px,16px,32px)}
+
+.title,
+.clientName{
+	font-size:110%}
+
+.url{
+	color:-moz-nativehyperlinktext;
+	font-size:95%}
+
+.title[selected="true"],
+.url[selected="true"]{
+	color:inherit}
+
+.tabIcon{
+	-moz-padding-start:2px;
+	padding-top:2px}

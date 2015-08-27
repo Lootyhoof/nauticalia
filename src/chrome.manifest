@@ -1,0 +1,26 @@
+skin	communicator	nauticalia	communicator/
+skin	global		nauticalia	global/
+skin	browser		nauticalia	browser/
+skin	inspector	nauticalia	inspector/
+skin	mozapps		nauticalia	mozapps/
+skin	help		nauticalia	help/
+skin	downbar		nauticalia	downbar/
+skin	reporter	nauticalia	reporter/
+skin	offline		nauticalia	offline/
+skin	quicknote	nauticalia	quicknote/
+skin	tabprefs	nauticalia	tabprefs/
+skin	dataman		nauticalia	dataman/
+skin	dlman		nauticalia	dlman/
+skin	desktop		nauticalia	desktop/
+skin	locationbar2	nauticalia	locationbar2/
+skin	downloadmgr	nauticalia	downloadmgr/
+skin	favres		nauticalia	favres/
+skin	os		nauticalia	os-linux/
+skin	os		nauticalia	os-darwin/	os=Darwin
+skin	os		nauticalia	os-winnt/	os=WINNT
+skin    graphical-timeline nauticalia	gt/
+skin    imagetoolbar	nauticalia	imagetoolbar/
+skin    abouthome	nauticalia	abouthome/
+skin    jsterm		nauticalia	jsterm/
+skin    printedit	nauticalia	printedit/
+skin    speeddial	nauticalia	speeddial/

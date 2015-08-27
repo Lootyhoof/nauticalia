@@ -1,0 +1,14 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+groupbox,
+.groupbox-body{
+	margin:4px}
+caption{
+	margin:2px 0;
+	padding:2px 5px!important;
+	border-radius:7px;
+	border:1px outset threedface;
+	font-weight:bold;
+	box-shadow:1px 1px 2px threedshadow}
+.caption-text{padding:0 4px}
+caption.rounded{
+	background-color:transparent!important}

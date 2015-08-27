@@ -1,0 +1,30 @@
+#main-box{
+	background:transparent url(chrome://global/skin/gecko.png) no-repeat right bottom}
+
+#instructions{
+	font-weight:bold;
+	font-size:110%;
+	margin:2px}
+
+#palette-box{
+	margin:2px;
+	border:2px solid;
+	-moz-border-top-colors:ThreeDShadow ThreeDDarkShadow;
+	-moz-border-left-colors:ThreeDShadow ThreeDDarkShadow;
+	-moz-border-right-colors:ThreeDHighLight ThreeDShadow;
+	-moz-border-bottom-colors:ThreeDHighLight ThreeDShadow;
+	border-radius:5px}
+#palette-box>hbox{min-height:64px!important}
+#palette-box>hbox>toolbarpaletteitem{
+	padding-top:0!important;
+	padding-bottom:0!important}
+
+#main-window[Customize] #hc-titlebox{
+	min-width:6em;
+	min-height:10px;
+	border:1px dotted threedshadow!important}
+
+.groove{display:none}
+
+@media (-moz-windows-compositor){#donebutton{margin:0}}
+@media (min-width:600px){#donebutton{margin-top:-28px}}

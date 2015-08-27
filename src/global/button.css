@@ -1,0 +1,153 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+button{
+	margin:2px;
+	padding:1px;
+	outline-width:0!important;
+	border:2px solid;
+	-moz-border-top-colors:threedshadow threedhighlight;
+	-moz-border-left-colors:threedshadow threedhighlight;
+	-moz-border-right-colors:threeddarkshadow threedshadow;
+	-moz-border-bottom-colors:threeddarkshadow threedshadow;
+	background:ButtonFace url(chrome://global/skin/menu-bg.png);
+	color:ButtonText}
+toolbar>button,
+toolbar>*>button{
+	border-radius:5px;
+	-moz-border-top-colors:transparent;
+	-moz-border-left-colors:transparent;
+	-moz-border-right-colors:transparent;
+	-moz-border-bottom-colors:transparent;
+	background:none}
+notification>button,
+notification>*>button{
+	margin:1px 2px;
+	padding:0 2px;
+	border-radius:5px}
+
+.button-box{
+	border-width:0!important}
+
+button:focus{
+	box-shadow:0 0 0 2px #CCCCFF}
+
+.button-text{
+	margin:0 1px;
+	text-align:left;
+	vertical-align:middle}
+button:not([label])>.button-box>.button-text,
+.button-text:not([value]),.button-text[value=""]{
+	display:none}
+
+button[checked="true"]{
+	box-shadow:inset 1px 1px 1px graytext;
+	-moz-border-top-colors:threedshadow;
+	-moz-border-left-colors:threedshadow;
+	-moz-border-right-colors:threedhighlight threedshadow;
+	-moz-border-bottom-colors:threedhighlight threedshadow;
+	background:buttonface url(chrome://global/skin/highlight.png)}
+
+button:hover:not([disabled="true"]){
+	border:2px solid;
+	-moz-border-top-colors:threedshadow threedhighlight;
+	-moz-border-left-colors:threedshadow threedhighlight;
+	-moz-border-right-colors:threeddarkshadow threedshadow;
+	-moz-border-bottom-colors:threeddarkshadow threedshadow;
+	background:#CCCCFF url(chrome://global/skin/menu-bg.png);
+	color:black}
+
+button[default]:not([disabled="true"]){
+	font-weight:bold}
+
+button[type="menu"][open="true"],
+button:hover:active:not([type="menu"]):not([disabled="true"]){
+	box-shadow:inset 1px 1px 1px graytext;
+	-moz-border-top-colors:threeddarkshadow threedshadow;
+	-moz-border-left-colors:threeddarkshadow threedshadow;
+	-moz-border-right-colors:threedhighlight threedshadow;
+	-moz-border-bottom-colors:threedhighlight threedshadow;
+	background:highlight url(chrome://global/skin/menu-bg.png);
+	color:highlighttext}
+button:hover:not([disabled="true"]):not(:focus):not(:active){
+	box-shadow:1px 1px 2px graytext}
+
+button[disabled="true"]{
+	-moz-border-top-colors:threedshadow threedhighlight;
+	-moz-border-left-colors:threedshadow threedhighlight;
+	-moz-border-right-colors:threedshadow;
+	-moz-border-bottom-colors:threedshadow;
+	background:-moz-dialog none!important;
+	color:graytext!important;
+	text-shadow:1px 1px 1px threedhighlight}
+toolbar>button[disabled="true"],
+toolbar>*>button[disabled="true"]{
+	-moz-border-top-colors:transparent;
+	-moz-border-left-colors:transparent;
+	-moz-border-right-colors:transparent;
+	-moz-border-bottom-colors:transparent;
+	background-color:transparent!important}
+button[disabled="true"]>.button-box>.button-icon{
+	opacity:.5;
+	filter:url(chrome://global/skin/greyscale.svg#greyscale)}
+
+.busy{list-style-image:url(chrome://global/skin/loading.gif)}
+
+#MacAcceptBtn,#ok,#closeButton,#donebutton,
+button:-moz-any([dlgtype="accept"],[dlgtype="finish"],
+[anonid="enable"],[icon="accept"],[label="OK"],button[label="Save"]){
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(0 16px 16px 0)}
+#cancel,
+button:-moz-any([label="Close"],[anonid="disable"],[dlgtype="cancel"],[label="Cancel"],[icon="close"]){
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(16px 16px 32px 0)}
+#help,#HelpButton,
+button:-moz-any([dlgtype="help"],[label="More Info"],[icon="help"]){
+	list-style-image:url(chrome://global/skin/global.png)!important;
+	-moz-image-region:rect(32px 16px 48px 0)!important}
+button[icon="apply"],button[label^="Apply"]{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(80px 16px 96px 0)}
+button[type="disclosure"]{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(-1px 12px 11px 0)}
+button[type="disclosure"][open="true"]{
+	-moz-image-region:rect(-1px 25px 11px 13px)}
+.up,#up{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(0 60px 10px 50px)}
+.down,#dn,#down{
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(10px 60px 20px 50px)}
+button[label="Next"]:-moz-locale-dir(rtl),
+button[label="Prev"]{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(192px 16px 208px 0)}
+button[label="Prev"]:-moz-locale-dir(rtl),
+button[label="Next"]{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(208px 16px 224px 0)}
+
+button[type="menu-button"]{
+	background:none!important;
+	color:buttontext!important;
+	padding:0!important;
+	border-width:1px!important}
+
+.button-menubutton-button{
+	margin:0!important;
+	border:1px outset threedface!important}
+.button-menubutton-button:hover:active{
+	border:1px inset threedface!important}
+
+.button-menubutton-dropmarker{
+	border:1px outset threedface;
+	background:buttonface url(chrome://global/skin/menu-bg.png)}
+button:not([buttonover="true"]):hover>.button-menubutton-dropmarker{
+	background-color:#CCCCFF;
+	color:black}
+button:not([buttonover="true"]):hover:active>.button-menubutton-dropmarker,
+button[open="true"]>.button-menubutton-dropmarker{
+	border:1px inset threedface!important;
+	background-color:highlight!important;
+	color:highlighttext!important}
