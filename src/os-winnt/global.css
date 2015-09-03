@@ -49,9 +49,18 @@ toolbox:-moz-window-inactive:-moz-system-metric(windows-compositor){
 #navigator-toolbox[tabsontop="false"]>#PersonalToolbar,
 #navigator-toolbox[tabsontop="false"]>#PersonalToolbar[collapsed="true"]+toolbar+#stumbleupon,
 #PersonalToolbar[collapsed="true"]{
-	-moz-box-ordinal-group:45;
-	border-radius:5px 5px 0 0}
+	-moz-box-ordinal-group:45}
 
+/* Round top corners on Vista/7/8, but not Win10 because it's flush against the window edge */
+@media (-moz-os-version: windows-vista),
+(-moz-os-version: windows-win7),
+(-moz-os-version: windows-win8) {
+#navigator-toolbox[tabsontop="false"]>#PersonalToolbar,
+#navigator-toolbox[tabsontop="false"]>#PersonalToolbar[collapsed="true"]+toolbar+#stumbleupon,
+#PersonalToolbar[collapsed="true"]{
+	border-radius:5px 5px 0 0}
+}
+	
 @media (min-width:500px){
 /* winxp: 18px (but no easy to detect winxp); classic: 20px; basic: 22px; compositor/glass: 22px; win8 (compositor, but not glass): 20px */
 /* Try to move menubar in window frame */
