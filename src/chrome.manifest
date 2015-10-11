@@ -24,3 +24,5 @@ skin    abouthome	nauticalia	abouthome/
 skin    jsterm		nauticalia	jsterm/
 skin    printedit	nauticalia	printedit/
 skin    speeddial	nauticalia	speeddial/
+skin	appver		nauticalia	appver/25/ appversion<=26.0.0b2
+skin	appver		nauticalia	appver/26/ appversion>26.0.0b2
