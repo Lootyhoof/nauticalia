@@ -141,6 +141,10 @@ toolbar:not(#TabsToolbar):not(#toolbar-menubar){background-color:-moz-dialog}
 		.titlebar-button {
 			-moz-appearance: none !important;
 		}
+		
+		#main-window[sizemode=maximized] .titlebar-button {
+			margin-top: 8px !important;
+		}
 	}
 }
 
