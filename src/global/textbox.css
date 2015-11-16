@@ -57,7 +57,7 @@ html|*.textbox-textarea:focus{
 	outline:2px solid #CCCCFF}
 	
 @media (-moz-windows-classic),(-moz-os-version: windows-xp) {
-.textbox-input {
+html|*.textbox-input {
 	padding: 2px}
 }
 
