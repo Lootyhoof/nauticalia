@@ -223,6 +223,10 @@ toolbar:not(#TabsToolbar):not(#toolbar-menubar){background-color:-moz-dialog}
 		#main-window[sizemode="maximized"] #appmenu-button {
 			margin-top: 0px !important}
 	}
+	@media (-moz-os-version: windows-xp) {
+		#main-window[sizemode="maximized"] #titlebar-buttonbox {
+			margin-top: -6px !important}
+	}
 }
 
 :root[chromemargin][sizemode="maximized"] #appmenu-button{margin-top:2px;margin-bottom:4px}
