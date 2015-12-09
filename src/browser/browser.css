@@ -247,10 +247,10 @@ toolbar[iconsize="small"]>#bookmarks-button{
 	-moz-image-region:rect(160px 16px 176px 0)}
 #window-controls{-moz-box-align:stretch}
 
-#history-button,#downloads-button,#mail-button,#new-window-button,#fullscreen-button{
+#history-button,#history-menu-button,#downloads-button,#mail-button,#new-window-button,#fullscreen-button{
 	list-style-image:url(chrome://global/skin/small.png)}
 
-#history-button{-moz-image-region:rect(48px 48px 72px 24px)}
+#history-button,#history-menu-button{-moz-image-region:rect(48px 48px 72px 24px)}
 #downloads-button{-moz-image-region:rect(72px 48px 96px 24px)}
 #mail-button{-moz-image-region:rect(96px 48px 120px 24px)}
 #new-window-button{-moz-image-region:rect(120px 48px 144px 24px)}
@@ -259,12 +259,13 @@ toolbar[iconsize="small"]>toolbarpaletteitem>toolbarbutton:not([id="new-tab-butt
 	width:16px;
 	height:16px!important}
 
-toolbar[iconsize="small"]>#history-button,toolbar[iconsize="small"]>#downloads-button,
-toolbar[iconsize="small"]>#mail-button,toolbar[iconsize="small"]>#new-window-button,
-toolbar[iconsize="small"]>#fullscreen-button{
+toolbar[iconsize="small"]>#history-button,toolbar[iconsize="small"]>#history-menu-button,
+toolbar[iconsize="small"]>#downloads-button,toolbar[iconsize="small"]>#mail-button,
+toolbar[iconsize="small"]>#new-window-button,toolbar[iconsize="small"]>#fullscreen-button{
 	list-style-image:url(chrome://global/skin/global.png)}
 
-toolbar[iconsize="small"]>#history-button{-moz-image-region:rect(32px,32px,48px,16px)}
+toolbar[iconsize="small"]>#history-button,
+toolbar[iconsize="small"]>#history-menu-button{-moz-image-region:rect(32px,32px,48px,16px)}
 toolbar[iconsize="small"]>#downloads-button{-moz-image-region:rect(112px,16px,128px,0)}
 toolbar[iconsize="small"]>#mail-button{-moz-image-region:rect(64px,32px,80px,16px)}
 toolbar[iconsize="small"]>#new-window-button{-moz-image-region:rect(80px,32px,96px,16px)}
