@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.1.0
+- (PM26) add history menu button
+- fix media controls
+- use correct icons for media controls
+
 ### 1.0.4
 - fix textbox padding (again)
 - fix caption button margins on WinXP
