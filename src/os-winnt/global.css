@@ -170,6 +170,12 @@ toolbar:not(#TabsToolbar):not(#toolbar-menubar){background-color:-moz-dialog}
     }
   } 
    
+  @media (-moz-os-version: windows-win10) {
+    #main-window:not(:-moz-lwtheme):after {
+      color: black !important;
+    }
+  }
+   
   #main-window[sizemode="maximized"] #titlebar-buttonbox {
     -moz-margin-end: 3px;
   }
