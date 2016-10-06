@@ -4,26 +4,28 @@
 	display:-moz-box;
 	-moz-box-flex:1}
 
+.stylesheet-media-container,
 .splitview-nav{
+	padding:0;
+	margin:0;
 	border-width:0;
 	border-style:solid;
-	border-width:2px 0 0 0;
+	border:2px solid;
 	-moz-border-top-colors:threedshadow threeddarkshadow;
+	-moz-border-left-colors:threedshadow threeddarkshadow;
+	-moz-border-right-colors:threedhighlight threedshadow;
+	-moz-border-bottom-colors:threedhighlight threedshadow;
 	background-image:-moz-linear-gradient(-moz-dialog,graytext 200%)}
+.splitview-nav:focus{outline:0}
+.stylesheet-media-container{border-bottom-width:0}
 
-/* landscape mode */
-@media (min-width: 551px){
+@media (min-width:551px){
 .splitview-details.splitview-active{-moz-box-orient:horizontal}
-.splitview-nav:-moz-locale-dir(ltr){
-	border-right-width:2px;
-	-moz-border-right-colors:threedhighlight threedshadow}
-.splitview-nav:-moz-locale-dir(rtl){
-	border-left-width:2px;
-	-moz-border-left-colors:threedhighlight threedshadow}
+.splitview-nav{border-bottom-width:0}
 }
-/* portrait mode */
-@media (max-width: 550px){
+@media (max-width:550px){
 .splitview-controller{max-height:20em!important}
+.splitview-nav{-moz-border-end-width:0}
 .splitview-nav>li,
 .stylesheet-info,
 .stylesheet-info>h1{
@@ -43,21 +45,16 @@
 .splitview-portrait-resizer{height:7px}
 .splitview-landscape-resizer{width:7px}
 
-.splitview-nav{
-	padding:0;
-	margin:0}
-.splitview-nav:focus{
-	outline:0}
-
+.media-rule-label,
 .splitview-nav>li{
 	-moz-box-pack:start;
 	outline:0;
 	padding:0;
-	border-top:1px outset threedface;
-	border-bottom:1px outset threedface;
+	border:1px outset threedface;
 	background-color:-moz-Dialog;
 	color:-moz-DialogText}
 
+.media-rule-label:hover,
 .splitview-portrait-resizer:hover,
 .splitview-landscape-resizer:hover,
 .splitview-nav>li:hover{
@@ -82,13 +79,6 @@ li.splitview-active .splitview-name{font-weight:bold}
 a{
 	color:-moz-hyperlinktext;
 	text-decoration:underline}
-
-.style-editor-newButton{
-	list-style-image:url(chrome://global/skin/widgets.png);
-	-moz-image-region:rect(41px,54px,57px,38px)}
-.style-editor-importButton{
-	list-style-image:url(chrome://global/skin/widgets.png);
-	-moz-image-region:rect(57px 53px 73px 38px)}
 
 .stylesheet-info{
 	-moz-box-pack:start!important;
@@ -138,44 +128,6 @@ a{
 	-moz-box-flex:1;
 	text-align:end}
 
-a.stylesheet-saveButton{
-	visibility:hidden;
-	outline:0!important;
-	display:-moz-box;
-	min-height:20px;
-	text-decoration:none;
-	margin:0;
-	padding:0 2px;
-	-moz-padding-start:20px;
-	border:2px solid;
-	-moz-border-top-colors:ThreeDShadow ThreeDHighLight;
-	-moz-border-left-colors:ThreeDShadow ThreeDHighLight;
-	-moz-border-right-colors:ThreeDDarkShadow ThreeDShadow;
-	-moz-border-bottom-colors:ThreeDDarkShadow ThreeDShadow;
-	background-color:buttonface;
-	background-image:-moz-image-rect(url(chrome://global/skin/global.png),368,16,384,0),url(chrome://global/skin/menu-bg.png);
-	background-repeat:no-repeat,repeat;
-	background-position:2px center,top left;
-	color:buttontext}
-li:hover>hgroup>.stylesheet-more>h3>.stylesheet-saveButton,
-.unsaved .stylesheet-saveButton{
-	visibility:visible}
-a.stylesheet-saveButton:focus{
-	outline:0!important;
-	box-shadow:0 0 2px #9999CC!important}
-a.stylesheet-saveButton:hover{
-	box-shadow:1px 1px 2px threedshadow;
-	background-color:#CCCCFF;
-	color:black}
-a.stylesheet-saveButton:hover:active{
-	box-shadow:none;
-	-moz-border-top-colors:threedshadow threeddarkshadow;
-	-moz-border-left-colors:threedshadow threeddarkshadow;
-	-moz-border-right-colors:threedhighlight transparent;
-	-moz-border-bottom-colors:threedhighlight transparent;
-	background-color:highlight;
-	color:highlighttext}
-
 h1,h2,h3{
 	font-size:inherit;
 	font-weight:normal;
@@ -183,8 +135,14 @@ h1,h2,h3{
 	padding:0}
 
 .loading>box>box>box>.splitview-nav{
-	background:url(chrome://global/skin/icons/loading_16.png) no-repeat center center}
+	background:url(chrome://global/skin/icons/loading_16.png) no-repeat center}
 
 .splitview-nav-container>spacer{display:none}
 .splitview-nav-container>.devtools-toolbar{-moz-box-ordinal-group:0}
+.splitview-main>.devtools-toolbar{min-width:inherit}
 .profile-name{padding:2px!important;font-size:inherit!important}
+.media-condition-unmatched{color:graytext}
+.media-rule-condition{padding:0 1px}
+.media-rule-condition:not(.media-condition-unmatched){font-weight:600}
+.media-rule-line{pointer-events:none;color:inherit;border-width:0}
+.stylesheet-sidebar>.devtools-toolbar{padding:2px}

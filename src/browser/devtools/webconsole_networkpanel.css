@@ -51,7 +51,7 @@ h1>.info{
 	overflow:auto;
 	display:block}
 .property-name{
-	text-align:right;
+	text-align:end;
 	white-space:nowrap;
 	vertical-align:top;
 	font-weight:bold;

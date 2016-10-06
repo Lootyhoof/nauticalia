@@ -22,9 +22,6 @@
 	height:14px;
 	background-image:-moz-image-rect(url(chrome://global/skin/global.png),400,16,416,0)}
 
-.gcli-menu-template{
-	width:auto!important}
-
 .gcli-tt-description,
 .gcli-tt-error{
 	padding:0 10px}
@@ -82,20 +79,21 @@
 .gcli-menu-option:hover,
 .gcli-menu-highlight,
 .gcli-menu-highlight.gcli-menu-option:hover{
-	background-color:#CCCCFF}
+	background:#CCCCFF url(chrome://global/skin/menu-bg.png)}
 
-.gcli-menu-more {
+.gcli-menu-more{
 	font-style:italic;
-	text-align:right;
+	text-align:end;
 	-moz-padding-end:8px}
-	
+
 .gcli-addon-disabled{
 	opacity:.6;
 	text-decoration:line-through}
 
+.gcli-row-out td{white-space:nowrap}
 .gcli-help-arrow{color:highlight}
 .gcli-help-header{margin:10px 0 6px}
 .gcli-menu-name{-moz-padding-start:8px}
 .gcli-menu-typed{color:darkgreen}
 .gcli-breakpoint-label{font-weight:bold}
-.gcli-breakpoint-lineText{font-family:Consolas,Lucida Console,monospace}
+.gcli-breakpoint-lineText{font-family:Menlo,Consolas,Lucida Console,monospace}
