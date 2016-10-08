@@ -151,6 +151,9 @@ body>div#eyedropper-button{
 #command-button-frames{
 	list-style-image:url(debugger.png);
 	-moz-image-region:rect(0,304px,16px,288px)}
+#command-button-eyedropper{
+	list-style-image:url(debugger.png);
+	-moz-image-region:rect(16px,220px,32px,204px)}
 
 #inspector-sidebar,
 :-moz-any(#inspector-sidebar,.generic-toggled-side-pane)>tabpanels{
