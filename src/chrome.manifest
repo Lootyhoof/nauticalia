@@ -24,3 +24,5 @@ skin    abouthome	nauticalia	abouthome/
 skin    jsterm		nauticalia	jsterm/
 skin    printedit	nauticalia	printedit/
 skin    speeddial	nauticalia	speeddial/
+
+override chrome://browser/skin/s4ever.xml chrome://browser/skin/s4ever-27.xml appversion>=27.0.0b1
