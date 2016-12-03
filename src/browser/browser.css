@@ -735,7 +735,7 @@ toolbar[iconsize="small"]>toolbaritem#go-button{-moz-box-orient:horizontal!impor
 	list-style-image:url(chrome://global/skin/icons/information-16.png)}
 #pointerLock-notification-icon {
 	list-style-image:url(chrome://browser/skin/icons.png);
-	-moz-image-region:rect(0,176px,16px,160px)}
+	-moz-image-region:rect(0,224px,16px,208px)}
 
 #blocked-plugins-notification-icon[showing],
 #notification-popup-box[hidden]{
@@ -1407,16 +1407,9 @@ toolbar[iconsize="small"]>#grabanddrag-button[gadOn="BL"]{-moz-image-region:rect
 	background-color:rgba(25,25,25,.5)}
 
 #highlighter-panel{
-	-moz-window-shadow:none;
 	border-width:0;
 	background-color:#eeffaa;
 	opacity:.35}
-
-#highlighter-closebutton{
-	list-style-image:url(chrome://global/skin/global.png);
-	-moz-image-region:rect(177px,31px,191px,17px)}
-#highlighter-closebutton:hover{
-	-moz-image-region:rect(225px,31px,239px,17px)}
 
 .highlighter-outline,
 #highlighter-outline,
@@ -1434,8 +1427,12 @@ toolbar[iconsize="small"]>#grabanddrag-button[gadOn="BL"]{-moz-image-region:rect
 	background:none!important;
 	cursor:n-resize}
 
+.highlighter-nodeinfobar-button{
+	margin:0}
+
 .highlighter-nodeinfobar,
 #highlighter-nodeinfobar{
+	padding:1px;
 	border:1px outset threedface;
 	box-shadow:1px 1px 3px threeddarkshadow;
 	border-radius:5px;
@@ -1455,88 +1452,60 @@ toolbar[iconsize="small"]>#grabanddrag-button[gadOn="BL"]{-moz-image-region:rect
 .highlighter-nodeinfobar-arrow{
 	width:14px;
 	height:14px;
-	-moz-margin-start:-moz-calc(50% - 7px);
+	-moz-margin-start:calc(50% - 7px);
 	-moz-transform:rotate(-45deg);
 	border:1px solid transparent;
 	background-clip:padding-box;
 	background-repeat:no-repeat}
-
 #highlighter-nodeinfobar-arrow-top{
 	margin-top:8px;
 	margin-bottom:-8px;
 	border-top-color:threedhighlight;
 	border-right-color:threedshadow;
-	background-image:-moz-linear-gradient(bottom left,transparent 50%,-moz-Dialog 50%)}
-
+	background-image:linear-gradient(45deg,transparent 50%,-moz-Dialog 50%)}
 #highlighter-nodeinfobar-arrow-bottom{
 	margin-top:-8px;
 	margin-bottom:8px;
 	border-left-color:threedhighlight;
 	border-bottom-color:threedshadow;
-	background-image:-moz-linear-gradient(top right,transparent 50%,-moz-Dialog 50%)}
-
+	background-image:linear-gradient(225deg,transparent 50%,-moz-Dialog 50%)}
 #highlighter-nodeinfobar-container[hide-arrow]>#highlighter-nodeinfobar{
 	margin:7px 0}
+	
+html|*.highlighter-nodeinfobar-tagname{color:purple;-moz-padding-start:4px}
+html|*.highlighter-nodeinfobar-id{color:darkgreen}
+html|*.highlighter-nodeinfobar-classes,
+html|*.highlighter-nodeinfobar-pseudo-classes{color:darkblue}
+html|*.highlighter-nodeinfobar-dimensions{
+	-moz-margin-start:4px;
+	-moz-border-start:2px groove threedface;
+	padding:0 4px}
 
 #inspector-tree-box{min-height:100px}
 #inspector-top-resizer{background-image:none;width:0;height:4px}
 #inspector-top-resizer:hover{background-color:#CCCCFF}
 #inspector-top-resizer[state="dragging"]{background-color:highlight}
 
-.breadcrumbs-widget-container,
-#inspector-breadcrumbs{
-	min-height:21px;
-	margin:1px 2px}
-.breadcrumbs-widget-container>scrollbox,
-#inspector-breadcrumbs>scrollbox{
-	box-shadow:inset 1px 1px 1px threedshadow;
-	border-radius:5px;
-	border:1px inset threedface;
-	background-image:-moz-linear-gradient(threedface,threedshadow 200%)}
-.breadcrumbs-widget-item,
-.inspector-breadcrumbs-button{
-	max-width:250px;
-	overflow:hidden;
-	margin:0;
-	padding:0 2px;
-	border-radius:0!important;
-	box-shadow:none;
-	border:1px outset threedface}
-.breadcrumbs-widget-item:hover,
-.inspector-breadcrumbs-button:hover{
-	background-color:#CCCCFF}
-.breadcrumbs-widget-item:hover:active,
-.inspector-breadcrumbs-button:hover:active{
-	background-color:highlight}
-.breadcrumbs-widget-item:first-child,
-.inspector-breadcrumbs-button:first-child{
-	border-radius:3px 0 0 3px!important;
-	-moz-outline-radius:4px 0 0 4px!important}
-.breadcrumbs-widget-item[checked],
-.inspector-breadcrumbs-button[checked]{
-	background-color:highlight;
-	color:highlighttext}
-
 html|*.highlighter-nodeinfobar-id,
 html|*#highlighter-nodeinfobar-id,
-.inspector-breadcrumbs-id{color:darkgreen}
+.inspector-breadcrumbs-id{
+	color:darkgreen}
+
 html|*.highlighter-nodeinfobar-classes,
 html|*#highlighter-nodeinfobar-classes,
-.inspector-breadcrumbs-classes{color:darkblue}
+.inspector-breadcrumbs-classes{
+	color:darkblue}
+
 html|*.highlighter-nodeinfobar-pseudo-classes,
 html|*#highlighter-nodeinfobar-pseudo-classes,
-.inspector-breadcrumbs-pseudo-classes{color:darkred}
+.inspector-breadcrumbs-pseudo-classes{
+	color:darkred}
 
 .inspector-breadcrumbs-button[checked]>.inspector-breadcrumbs-id{color:green}
 .inspector-breadcrumbs-button[checked]>.inspector-breadcrumbs-classes{color:blue}
 .inspector-breadcrumbs-button[checked]>.inspector-breadcrumbs-pseudo-classes{color:red}
 
-#developer-toolbar-toolbox-button{
-	margin:0 2px;
-	padding:1px 2px;
-	-moz-box-direction:reverse;
-	list-style-image:url(chrome://browser/skin/icons.png);
-	-moz-image-region:rect(0,192px,16px,176px)}
+#developer-toolbar-toolbox-button{-moz-box-direction:reverse}
 #developer-toolbar-toolbox-button>.toolbarbutton-text{display:none}
 
 #developer-toolbar-toolbox-button[error-count]:before,
@@ -1545,7 +1514,7 @@ html|*#highlighter-nodeinfobar-pseudo-classes,
 	border-radius:3px;
 	box-shadow:1px 1px 2px 1px graytext,1px 1px graytext;
 	padding:0 3px;
-	font-size:9px;
+	font-size:90%;
 	font-weight:bold;
 	background-color:rgb(240,61,37);
 	color:white}
@@ -1719,47 +1688,25 @@ toolbar[iconsize="small"]>#social-share-button,
 	background-color:highlight;
 	color:highlighttext}
 
-html|*#gcli-tooltip-frame,
-html|*#gcli-output-frame{
-	border-width:0}
-
-.gclitoolbar-stack-node{
-	margin:1px 2px;
-	border-radius:5px;
-	background-color:-moz-field;
-	color:-moz-fieldtext}
-
 #gcli-output,
 #gcli-tooltip{
-	min-height:1px;
-	border-width:0;
-	background-color:transparent;
-	margin-bottom:-2px}
+	min-height:auto;
+	margin:0!important;
+	transition:none!important}
+html|*#gcli-tooltip-frame,
+html|*#gcli-output-frame{
+	margin:0!important;
+	padding:0!important;
+	border-width:0!important}
 
-.gclitoolbar-input-node,
-.gclitoolbar-complete-node,
-.gclitoolbar-prompt{
-	margin:0;
-	-moz-box-align:center;
-	padding-top:0;
-	padding-bottom:0;
-	border-radius:5px;
-	background-color:transparent;
-	text-shadow:none}
-
+.gclitoolbar-input-node>.textbox-input-box>html|*.textbox-input{
+	padding:2px}
 .gclitoolbar-complete-node{
-	padding-left:17px;
+	z-index:100;
+	pointer-events:none;
+	margin:5px 6px;
+	background:transparent;
 	color:transparent}
-
-.gclitoolbar-input-node{
-	padding-left:13px}
-
-.gclitoolbar-prompt{
-	padding-left:4px;
-	padding-bottom:2px;
-	font-weight:bold}
-
-.gclitoolbar-prompt-label,
 .gcli-in-incomplete,
 .gcli-in-error,
 .gcli-in-ontab,
@@ -1769,12 +1716,20 @@ html|*#gcli-output-frame{
 .gcli-in-valid{
 	margin:0;
 	padding:0}
+.gcli-in-incomplete{border-bottom:2px dotted graytext;margin-bottom:-2px}
+.gcli-in-error{border-bottom:2px dotted red;margin-bottom:-2px}
+.gcli-in-ontab{color:graytext}
+.gcli-in-todo{color:darkblue}
+.gcli-in-closebrace{color:threedshadow}
 
-.gcli-in-incomplete{border-bottom:2px dotted graytext}
-.gcli-in-error{border-bottom:2px dotted darkred}
-.gcli-in-ontab{color:hsl(210,0%,35%)}
-.gcli-in-todo{color:hsl(210,50%,35%)}
-.gcli-in-closebrace{color:hsl(0,0%,80%)}
+.devtools-eyedropper-panel,
+.devtools-eyedropper-iframe{
+	width:110px;
+	height:130px;
+	pointer-events:none;
+	-moz-appearance:none;
+	background:none;
+	border:none}
 
 .browserContainer[responsivemode],
 vbox[anonid=browserContainer][responsivemode]{
@@ -1782,15 +1737,20 @@ vbox[anonid=browserContainer][responsivemode]{
 	padding:4px}
 
 .devtools-responsiveui-toolbar:not([forceit]){
-	background:none;
-	margin-bottom:4px;
+	background:none!important;
+	margin-bottom:4px!important;
 	border-width:0!important}
 
 .browserStack[responsivemode],
 stack[anonid=browserStack][responsivemode]{
 	box-shadow:2px 2px 15px graytext,2px 2px 4px graytext}
 
+#printedit-toolbar,
+.devtools-responsiveui-menulist{background:-moz-dialog}
+
+.devtools-responsiveui-rotate,
 .devtools-responsiveui-toolbar>.devtools-toolbarbutton{
+	padding:1px;
 	list-style-image:url(chrome://global/skin/global.png);
 	-moz-image-region:rect(448px,32px,464px,16px);
 	font-weight:600;
@@ -1798,13 +1758,28 @@ stack[anonid=browserStack][responsivemode]{
 .devtools-responsiveui-toolbar>toolbarbutton:not(:hover){
 	color:threedhighlight}
 
+.devtools-responsiveui-touch{
+	list-style-image:url(chrome://browser/skin/icons.png)!important;
+	-moz-image-region:rect(0,208px,16px,192px)!important}
+.devtools-responsiveui-screenshot{
+	list-style-image:url(chrome://browser/skin/icons.png)!important;
+	-moz-image-region:rect(0,160px,16px,144px)!important}
+
+.devtools-responsiveui-resizebarV,
 .devtools-responsiveui-resizebar{
 	cursor:ew-resize;
 	width:12px;
 	height:80px;
-	-moz-transform:translate(12px,-40px);
+	-moz-transform:translate(14px,-40px);
 	background:-moz-image-rect(url(chrome://global/skin/grippy-h.png),10,12,90,0) center no-repeat}
 
+.devtools-responsiveui-resizebarH{
+	cursor:ns-resize;
+	height:12px;
+	width:80px;
+	-moz-transform:translate(-40px,14px);
+	background:-moz-image-rect(url(chrome://global/skin/grippy-v.png),0,90,12,10) center no-repeat}
+	
 .devtools-responsiveui-resizehandle{
 	cursor:se-resize;
 	width:12px;
