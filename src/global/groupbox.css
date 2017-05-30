@@ -1,14 +1,52 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
-groupbox,
-.groupbox-body{
-	margin:4px}
+groupbox:not([hidden="true"]):not([collapsed="true"]){
+	display:-moz-box;
+	-moz-box-orient:vertical}
+groupbox{
+	margin:18px 8px 8px;
+	border-radius:7px;
+	box-shadow:1px 1px 2px threedshadow,0 0 1px threeddarkshadow}
+groupbox.collapsable[closed="true"]{box-shadow:none}
+groupbox[orient="horizontal"]{position:relative}
+.groupbox-body{margin:6px}
+.groupbox-body[orient="horizontal"]{margin-top:20px}
 caption{
-	margin:2px 0;
+	margin:0;
 	padding:2px 5px!important;
+	font-weight:bold;
 	border-radius:7px;
 	border:1px outset threedface;
-	font-weight:bold;
-	box-shadow:1px 1px 2px threedshadow}
+	box-shadow:1px 1px 2px threedshadow;
+	background:-moz-dialog}
+groupbox>caption{margin-top:-12px}
+[orient="horizontal"]>.groupbox-title{-moz-box-orient:vertical}
+[orient="horizontal"]>caption{position:absolute;top:0;left:0}
 .caption-text{padding:0 4px}
 caption.rounded{
-	background-color:transparent!important}
+	background-color:-moz-dialog!important}
+	
+.collapsable>.groupbox-title>caption:hover{
+	border:2px solid;
+	padding:1px 4px!important;
+	-moz-border-top-colors:ThreeDShadow ThreeDHighLight;
+	-moz-border-left-colors:ThreeDShadow ThreeDHighLight;
+	-moz-border-right-colors:ThreeDDarkShadow ThreeDShadow;
+	-moz-border-bottom-colors:ThreeDDarkShadow ThreeDShadow;
+	background-color:#CCCCFF;
+	color:black}
+.collapsable>.groupbox-title>caption:hover:active{
+	-moz-border-top-colors:threedshadow;
+	-moz-border-left-colors:threedshadow;
+	-moz-border-right-colors:ThreeDDarkShadow ThreeDHighLight;
+	-moz-border-bottom-colors:ThreeDDarkShadow ThreeDHighLight;
+	background-color:Highlight;
+	color:HighlightText}
+.collapsable>.groupbox-title>caption>.caption-icon{
+	margin:2px 0 0 0;
+	min-height:12px;
+	max-height:12px;
+	padding:2px;
+	list-style-image:url(chrome://global/skin/widgets.png);
+	-moz-image-region:rect(40px 36px 48px 28px)}
+.collapsable[closed="true"]>.groupbox-title>caption>.caption-icon{
+	-moz-image-region:rect(32px 36px 40px 28px)}

@@ -1,7 +1,7 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 button{
-	margin:2px;
+	margin:1px 2px;
 	padding:1px;
 	outline-width:0!important;
 	border:2px solid;
@@ -9,42 +9,55 @@ button{
 	-moz-border-left-colors:threedshadow threedhighlight;
 	-moz-border-right-colors:threeddarkshadow threedshadow;
 	-moz-border-bottom-colors:threeddarkshadow threedshadow;
-	background:ButtonFace url(chrome://global/skin/menu-bg.png);
+	background:buttonface url(chrome://global/skin/menu-bg.png);
 	color:ButtonText}
-toolbar>button,
-toolbar>*>button{
-	border-radius:5px;
+
+toolbar button{
+	border-radius:5px}
+toolbar button:not(:hover){
 	-moz-border-top-colors:transparent;
 	-moz-border-left-colors:transparent;
 	-moz-border-right-colors:transparent;
 	-moz-border-bottom-colors:transparent;
 	background:none}
-notification>button,
-notification>*>button{
+toolbar button:not([disabled="true"]):not([checked="true"]):not([open="true"]):hover{
+	box-shadow:.5px .5px 2.5px -.5px graytext;
+	background-image:url(chrome://global/skin/toolbar-bg.png)}
+toolbar[mode="icons"]>button>.button-text,
+toolbar[mode="text"]>button>.button-icon,
+toolbar[mode="icons"]>*>button>.button-text,
+toolbar[mode="text"]>*>button>.button-icon{
+	display:none}
+
+notification button{
 	margin:1px 2px;
 	padding:0 2px;
 	border-radius:5px}
+notification button-menubutton-button:-moz-locale-dir(ltr),
+notification button-menubutton-dropmarker:-moz-locale-dir(rtl){
+	border-top-right-radius:0;border-bottom-right-radius:0}
+notification button-menubutton-button:-moz-locale-dir(rtl),
+notification button-menubutton-dropmarker:-moz-locale-dir(ltr){
+	border-top-left-radius:0;border-bottom-left-radius:0}
 
-.button-box{
-	border-width:0!important}
+.button-box{border-width:0!important}
 
-button:focus{
-	box-shadow:0 0 0 2px #CCCCFF}
+button:focus{box-shadow:0 0 0 2px #CCCCFF}
 
 .button-text{
 	margin:0 1px;
-	text-align:left;
+	text-align:start;
 	vertical-align:middle}
 button:not([label])>.button-box>.button-text,
 .button-text:not([value]),.button-text[value=""]{
 	display:none}
 
 button[checked="true"]{
-	box-shadow:inset 1px 1px 1px graytext;
-	-moz-border-top-colors:threedshadow;
-	-moz-border-left-colors:threedshadow;
-	-moz-border-right-colors:threedhighlight threedshadow;
-	-moz-border-bottom-colors:threedhighlight threedshadow;
+	box-shadow:inset 1px 1px 1px threedshadow!important;
+	-moz-border-top-colors:threedshadow!important;
+	-moz-border-left-colors:threedshadow!important;
+	-moz-border-right-colors:threedhighlight threedshadow!important;
+	-moz-border-bottom-colors:threedhighlight threedshadow!important;
 	background:buttonface url(chrome://global/skin/highlight.png)}
 
 button:hover:not([disabled="true"]){
@@ -69,36 +82,49 @@ button:hover:active:not([type="menu"]):not([disabled="true"]){
 	background:highlight url(chrome://global/skin/menu-bg.png);
 	color:highlighttext}
 button:hover:not([disabled="true"]):not(:focus):not(:active){
-	box-shadow:1px 1px 2px graytext}
+	box-shadow:1px 1px 2.5px -.5px graytext}
 
 button[disabled="true"]{
+	pointer-events:none;
 	-moz-border-top-colors:threedshadow threedhighlight;
 	-moz-border-left-colors:threedshadow threedhighlight;
 	-moz-border-right-colors:threedshadow;
 	-moz-border-bottom-colors:threedshadow;
-	background:-moz-dialog none!important;
+	background-color:-moz-dialog!important;
 	color:graytext!important;
 	text-shadow:1px 1px 1px threedhighlight}
 toolbar>button[disabled="true"],
 toolbar>*>button[disabled="true"]{
-	-moz-border-top-colors:transparent;
-	-moz-border-left-colors:transparent;
-	-moz-border-right-colors:transparent;
-	-moz-border-bottom-colors:transparent;
-	background-color:transparent!important}
+	-moz-border-top-colors:transparent!important;
+	-moz-border-left-colors:transparent!important;
+	-moz-border-right-colors:transparent!important;
+	-moz-border-bottom-colors:transparent!important;
+	background:none!important}
 button[disabled="true"]>.button-box>.button-icon{
-	opacity:.5;
-	filter:url(chrome://global/skin/greyscale.svg#greyscale)}
+	filter:opacity(.4) grayscale(1)}
 
 .busy{list-style-image:url(chrome://global/skin/loading.gif)}
 
-#MacAcceptBtn,#ok,#closeButton,#donebutton,
-button:-moz-any([dlgtype="accept"],[dlgtype="finish"],
-[anonid="enable"],[icon="accept"],[label="OK"],button[label="Save"]){
+button[id*="accept"],
+button[anonid="search-suggestions-notification-enable"],
+#btnApplyChanges,#MacAcceptBtn,#ok,#closeButton,#donebutton,
+.translate-infobar-element[anonid="translate"],
+button[dlgtype="accept"],button[dlgtype="finish"],
+button[anonid="enable"],
+button[icon="accept"],
+button[label="OK"],button[label="Save"]{
 	list-style-image:url(chrome://global/skin/global.png);
 	-moz-image-region:rect(0 16px 16px 0)}
+
+button[id*="cancel"],
+button[anonid="search-suggestions-notification-disable"],
 #cancel,
-button:-moz-any([label="Close"],[anonid="disable"],[dlgtype="cancel"],[label="Cancel"],[icon="close"]){
+.translate-infobar-element[anonid="notNow"],
+button[label="Close"],
+button[anonid="disable"],
+button[dlgtype="cancel"],
+button[label="Cancel"],
+button[icon="close"]{
 	list-style-image:url(chrome://global/skin/global.png);
 	-moz-image-region:rect(16px 16px 32px 0)}
 #help,#HelpButton,

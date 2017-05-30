@@ -7,10 +7,9 @@ textbox{
 	-moz-border-left-colors:ThreeDShadow ThreeDDarkShadow;
 	-moz-border-right-colors:ThreeDHighLight ThreeDShadow;
 	-moz-border-bottom-colors:ThreeDHighLight ThreeDShadow;
-	margin:2px;
+	margin:1px 2px;
 	padding:0;
-	cursor:text;
-	background:-moz-Field none;
+	background:-moz-Field;
 	color:-moz-FieldText}
 textbox[disabled="true"]{
 	cursor:default;
@@ -24,9 +23,7 @@ textbox[readonly="true"]{
 	background-color:-moz-Dialog;
 	color:-moz-DialogText}
 textbox.plain{
-	border-width:0!important;
-	background:none;
-	color:inherit}
+	border-width:0!important}
 textbox[empty="true"],
 textbox[isempty="true"]{
 	color:GrayText!important}
@@ -38,53 +35,35 @@ textbox[isempty="true"]{
 html|*.textbox-input,
 html|*.textbox-textarea{
 	-moz-appearance:none;
-	border-radius:inherit;
-	outline-color:transparent;
-	outline-offset:-2px;
-	background:none;
-	color:inherit;
-	border:0;
+	cursor:text;
+	outline-width:0;
 	margin:0;
 	padding:1px;
 	font:inherit;
-	text-shadow:inherit}
-textbox.plain html|*.textbox-input,
-#userAgent html|*.textbox-textarea{
-	outline-offset:0!important}
-
+	line-height:normal;
+	text-shadow:inherit;
+	border-radius:inherit;
+	border-width:0;
+	background:none;
+	color:inherit}
 html|*.textbox-input:focus,
 html|*.textbox-textarea:focus{
-	outline:2px solid #CCCCFF}
-	
-@media (-moz-windows-classic),(-moz-os-version: windows-xp) {
-html|*.textbox-input {
-	padding: 2px}
-}
+	box-shadow:inset 0 0 0 1px #CCCCFF}
 
 .searchbar-textbox,
 textbox[type="search"]{
-	box-shadow:1px 1px 1px threedface inset,-1px 0 1px threedface inset;
 	border-radius:5px}
 .searchbar-textbox>hbox>.textbox-input-box,
 textbox[type="search"]>.textbox-input-box{
 	border-radius:3px}
 
-.searchbar-textbox html|*.textbox-input,
-textbox[type="search"] html|*.textbox-input{
-	-moz-outline-radius:3px 0 0 3px}
-.searchbar-textbox html|*.textbox-input:-moz-locale-dir(rtl),
-textbox[type="search"] html|*.textbox-input:-moz-locale-dir(rtl){
-	-moz-outline-radius:0 3px 3px 0}
-
 .textbox-search-icons{
-	padding:1px 2px;
-	border:1px solid transparent;
-	list-style-image:url(chrome://global/skin/global.png);
+	cursor:auto;
+	padding:1px;
 	border-radius:0 3px 3px 0;
-	-moz-border-start:2px solid!important;
-	-moz-border-left-colors:threedshadow threedhighlight!important;
-	-moz-border-right-colors:threedshadow threedhighlight!important;
-	background:-moz-Field url(chrome://global/skin/menu-bg.png)}	
+	border:1px solid transparent;
+	-moz-border-start-color:threedshadow;
+	background:-moz-dialog url(chrome://global/skin/menu-bg.png)}	
 .textbox-search-icons:-moz-locale-dir(rtl){
 	border-radius:3px 0 0 3px}
 .textbox-search-icons:hover{
@@ -93,27 +72,28 @@ textbox[type="search"] html|*.textbox-input:-moz-locale-dir(rtl){
 .textbox-search-icons:hover:active{
 	border-style:inset;
 	background-color:Highlight}
-.textbox-search-icon{-moz-image-region:rect(64px 16px 80px 0)}
+.textbox-search-icon{
+	transform:scale(.8);
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(64px 16px 80px 0)}
 .textbox-search-icon[disabled="true"]{
-	opacity:.5;
-	filter:url(chrome://global/skin/greyscale.svg#greyscale)}
-.textbox-search-clear{-moz-image-region:rect(224px 32px 240px 16px)}
+	filter:opacity(.4) grayscale(1)}
+.textbox-search-clear{
+	background:-moz-image-rect(url(chrome://global/skin/global.png),177,31,191,17) center no-repeat}
+.textbox-search-icons:hover>.textbox-search-clear{
+	background-image:-moz-image-rect(url(chrome://global/skin/global.png),224,32,240,16)}
+.textbox-search-icons:hover:active>.textbox-search-clear{
+	background-image:-moz-image-rect(url(chrome://global/skin/global.png),113,31,127,17)}
 
 .textbox-search-icon[searchbutton]:not([disabled="true"]){cursor:pointer}
 .textbox-search-clear:not([disabled="true"]){cursor:default}
 
-.tree-input{margin:0!important}
+.tree-input,
 .tree-input html|*.textbox-input{margin:0!important}
 
 .textbox-contextmenu{cursor:default}
 
-/* Before FF19 */
-html|*.textbox-input:-moz-placeholder,
-html|*.textbox-textarea:-moz-placeholder{
-	font-style:italic;
-	opacity:.6!important}
-/* FF19 and higher */
 html|*.textbox-input::-moz-placeholder,
 html|*.textbox-textarea::-moz-placeholder{
-	font-style:italic;
-	opacity:.6!important}
+	opacity:.6!important;
+	font-style:italic}

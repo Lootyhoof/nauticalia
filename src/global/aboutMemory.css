@@ -1,8 +1,11 @@
 @import url(chrome://global/content/aboutMemory.css);
-@import url(chrome://global/skin/about.css);
-@import url(chrome://global/skin/htmlbutton.css);
+@import url(chrome://global/skin/netError.css);
 
-body{width:80%}
+body{
+	max-width:none!important;
+	margin:2em 4em!important;
+	padding:8px!important;
+	background-image:none!important}
 
 div.section,div.footer{
 	margin:0!important;
@@ -53,5 +56,16 @@ h2+pre,
 hr{display:none}
 hr+div+div{float:left;-moz-margin-end:4px}
 
-div.opsRow{padding:0;margin-top:0;border-width:0;background:none}
+div.opsRow{
+	padding:4px 8px;
+	margin-top:0;
+	border-width:0;
+	background:none;
+	border-radius:7px;
+	box-shadow:inset 1px 1px 3px threedshadow;
+	border:1px inset threedface}
 div.ancillary:first-child{margin-top:0;margin-bottom:10px}
+
+input[type="checkbox"]{opacity:1!important;position:relative!important}
+
+div.non-verbose pre.entries{overflow-x:auto}

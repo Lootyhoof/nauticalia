@@ -43,6 +43,7 @@ scrollbarbutton[active="true"]{
 	border-color:threedshadow threedface threedface threedshadow}
 thumb[disabled="true"],
 scrollbarbutton[disabled="true"]{
+	pointer-events:none;
 	background-color:-moz-Dialog!important}
 thumb:focus,
 scrollbarbutton:focus{
@@ -52,6 +53,8 @@ scrollbarbutton[type="decrement"]{background-position:0 0}
 scrollbarbutton[type="increment"]{background-position:0 -12px}
 scrollbarbutton[type="decrement"][sborient="vertical"]{background-position:-12px 0}
 scrollbarbutton[type="increment"][sborient="vertical"]{background-position:-12px -12px}
+
+scrollbarbutton[disabled="true"]{opacity:.5}
 
 scrollcorner{
 	background:-moz-Dialog url(chrome://global/skin/menu-bg.png);

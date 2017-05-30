@@ -18,18 +18,20 @@ radio{
 
 radio[focused="true"]{
 	box-shadow:0 0 0 2px #CCCCFF!important}
+
 radio:hover:not([selected="true"]):not([disabled="true"]){
-	border-color:threedhighlight threedshadow threedshadow threedhighlight;
+	border-color:threedhighlight graytext graytext threedhighlight;
 	background:#CCCCFF url(chrome://global/skin/menu-bg.png);
 	color:black}
 radio:hover:active:not([selected="true"]):not([disabled="true"]){
-	border-color:threedshadow threedhighlight threedhighlight threedshadow;
+	border-color:graytext threedhighlight threedhighlight graytext;
 	background-color:Highlight;
 	color:HighlightText}
 radio:hover:not([selected="true"]):not([disabled="true"]):not(:active){
-	box-shadow:1px 1px 2px threedshadow}
+	box-shadow:1px 1px 2.5px -.5px graytext}
 
 radio[disabled="true"]{
+	pointer-events:none;
 	color:graytext!important;
 	text-shadow:1px 1px 1px threedhighlight}
 
@@ -42,7 +44,7 @@ radio[disabled="true"]{
 .radio-check[disabled="true"]{-moz-image-region:rect(24px 24px 36px 12px)}
 .radio-check[selected="true"][disabled="true"]{-moz-image-region:rect(24px 12px 36px 0)}
 
-#viewGroup:focus{outline:0!important}
+#viewGroup:focus{outline-width:0!important}
 
 .paneSelector>radio,
 #viewGroup>radio{
@@ -60,28 +62,29 @@ radio[disabled="true"]{
 	background-image:url(chrome://global/skin/toolbar-bg.png)}
 .paneSelector>radio:hover:active:not([selected="true"]),
 #viewGroup>radio:hover:active:not([selected="true"]){
-	box-shadow:inset 1px 1px 3px threeddarkshadow}
+	box-shadow:inset 1px 1px 3px -.5px graytext}
 #viewGroup>radio[selected="true"],
 .paneSelector>radio[selected="true"]{
 	border:1px inset threedface!important;
-	box-shadow:inset 1px 1px 1px threedshadow!important;
+	box-shadow:inset 1px 1px 1px graytext!important;
 	background:-moz-dialog url(chrome://global/skin/highlight.png)!important;
 	color:-moz-DialogText!important}
 .paneSelector:focus>radio[selected="true"],
 #viewGroup>radio[selected="true"][focused="true"]{
-	box-shadow:inset 1px 1px 1px threedshadow,0 0 1px 2px #CCCCFF!important}
+	box-shadow:inset 1px 1px 1px graytext,0 0 1px 2px #CCCCFF!important}
 
 radiogroup[orient="horizontal"]{margin:2px}
 
 radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane]){
 	border-radius:0;
+	padding:1px;
 	-moz-padding-end:3px;
 	border-width:2px!important;
 	-moz-border-top-colors:threedshadow threedhighlight;
 	-moz-border-left-colors:threedshadow threedhighlight;
 	-moz-border-right-colors:threedhighlight threedshadow;
 	-moz-border-bottom-colors:threedhighlight threedshadow;
-	background-image:url(chrome://global/skin/menu-bg.png);
+	background-image:url(chrome://global/skin/toolbar-bg.png);
 	background-size:contain}
 
 radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane]):first-of-type:-moz-locale-dir(ltr),
@@ -106,7 +109,7 @@ radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane]):not([disabled=
 	-moz-border-top-colors:threedshadow threeddarkshadow!important;
 	-moz-border-left-colors:threedshadow threeddarkshadow!important;
 	-moz-border-right-colors:threedhighlight threedshadow!important;
-	-moz-border-bottom-colors:threedhighlight threedshadow!important}
+	-moz-border-bottom-colors:threedshadow threedshadow!important}
 
 radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane])[selected="true"]{
 	box-shadow:1px 1px 2px threedshadow inset;
@@ -114,15 +117,14 @@ radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane])[selected="true
 	-moz-border-left-colors:threedshadow!important;
 	-moz-border-right-colors:threedhighlight!important;
 	-moz-border-bottom-colors:threedhighlight!important;
-	box-shadow:1px 1px 2px threedshadow inset!important;
-	background:transparent url(chrome://global/skin/highlight.png)!important;
-	color:-moz-DialogText!important}
+	background-image:url(chrome://global/skin/backarea.png)!important;
+	color:black!important}
 
 radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane])[selected="true"]:-moz-locale-dir(rtl){
-	-moz-border-right-colors:threedshadow threedshadow!important;
-	-moz-border-left-colors:threedhighlight threedhighlight!important;
-	box-shadow:-1px 1px 2px threedface inset,-1px 1px 1px threedshadow inset}
+	box-shadow:-1px 1px 1px graytext inset!important;
+	-moz-border-right-colors:threedshadow!important;
+	-moz-border-left-colors:threedhighlight!important}
 radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane])[selected="true"][focused="true"]{
-	box-shadow:0 0 1px 2px #CCCCFF,1px 1px 2px threedshadow inset!important}
+	box-shadow:0 0 1px 2px #CCCCFF,1px 1px 1px graytext inset!important}
 radiogroup[orient="horizontal"]:not(#viewGroup)>radio:not([pane])[selected="true"][focused="true"]:-moz-locale-dir(rtl){
-	box-shadow:0 0 1px 2px #CCCCFF,-11px 1px 2px threedshadow inset!important}
+	box-shadow:0 0 1px 2px #CCCCFF,-1px 1px 1px graytext inset!important}

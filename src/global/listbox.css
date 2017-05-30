@@ -37,8 +37,8 @@ listheader[sortable="true"]:hover{
 	color:black}
 listheader[sortable="true"]:hover:active{
 	border:1px inset threedface;
-	background-color:darkblue;
-	color:white}
+	background-color:highlight;
+	color:highlighttext}
 
 .listheader-icon[src]{-moz-margin-end:2px}
 .listheader-label{margin:0!important}

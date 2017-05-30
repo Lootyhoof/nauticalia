@@ -1,6 +1,8 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
-.paneSelector{padding:1px;background:-moz-Dialog url(chrome://global/skin/toolbar-bg.png)}
+.paneSelector{
+	padding:1px;
+	background:-moz-Dialog url(chrome://global/skin/toolbar-bg.png)}
 .paneButtonIcon{width:24px;height:24px}
 .paneButtonLabel{margin:0 2px}
 
@@ -13,6 +15,7 @@
 	-moz-border-right-colors:ThreeDHighLight ThreeDShadow;
 	-moz-border-bottom-colors:ThreeDHighLight ThreeDShadow}
 
-separator{display:none}
 #LanguagesDialog{min-height:20em}
-#test-pilot-all-studies-window>.paneDeckContainer{display:none}
+separator,
+#test-pilot-all-studies-window>.paneDeckContainer{
+	display:none}

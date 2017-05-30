@@ -2,7 +2,7 @@
 .spinbuttons-button{
 	list-style-image:url(chrome://global/skin/widgets.png);
 	margin:0;
-	padding:1px;
+	padding:2px;
 	border:1px solid;
 	-moz-border-top-colors:threedhighlight;
 	-moz-border-left-colors:threedhighlight;

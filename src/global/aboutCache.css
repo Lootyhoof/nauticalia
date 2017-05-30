@@ -4,12 +4,12 @@ table{
 	width:100%}
 th{
 	width:14em;
-	padding:0 2px;
+	padding:0 1px;
 	white-space:nowrap;
 	text-align:end}
 td{
-	font-family:Consolas,Lucida Console,monospace;
-	padding:0 2px;
+	font-family:Menlo,Consolas,Lucida Console,monospace;
+	padding:0 1px;
 	word-wrap:break-word}
 
 #disk,#memory,#offline{
@@ -27,22 +27,19 @@ td{
 	text-align:center;
 	vertical-align:bottom;
 	white-space:normal;
-	padding:0 1px;
-	border-bottom:1px solid threedshadow}
-#entries>tbody>tr{
-	border-bottom:1px solid threedshadow;
-	border-left:1px solid threedshadow}
+	background-color:-moz-Dialog;
+	color:-moz-DialogText}
 #entries>tbody>tr>td{
 	text-align:center;
 	vertical-align:top;
-	padding:0 1px;
-	border-right:1px solid threedshadow}
+	border:1px solid threedshadow}
 #entries>tbody>tr>th:first-child,
 #entries>tbody>tr>td:first-child{
 	text-align:start}
 
-#col-key{width:55%}
-#col-dataSize{width:10%}
-#col-fetchCount{width:5%}
-#col-lastModified,#col-expires{width:15%}
+#col-pinned{width:5em}
+#col-key{width:100%}
+#col-dataSize{width:8em}
+#col-fetchCount{width:6em}
+#col-lastModified,#col-expires{width:13em}
 hr{display:none}
