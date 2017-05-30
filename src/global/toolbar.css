@@ -4,8 +4,7 @@ toolbar{
 	min-width:1px;
 	min-height:18px;
 	-moz-box-align:center;
-	background-image:url(chrome://global/skin/toolbar-bg.png);
-	background-size:contain}
+	background-image:url(chrome://global/skin/toolbar-bg.png)}
 menubar,
 toolbar[mode="text"]{
 	min-width:1px;
@@ -21,22 +20,23 @@ toolbarseparator{
 	width:2px;
 	height:14px;
 	margin:1px;
-	border-radius:2px;
 	border:1px inset threedface}
 toolbar[orient="vertical"] toolbarseparator{
 	width:14px;
 	height:2px}
 
 toolbarpaletteitem{cursor:-moz-grab}
-toolbarpaletteitem[mousedown]{
-	cursor:-moz-grabbing;
-	box-shadow:1px 1px 2px graytext,2px 2px 4px graytext}
 toolbarpaletteitem:hover{
 	box-shadow:1px 1px 2px graytext;
 	background-color:#CCCCFF}
 
-toolbarpaletteitem[dragover="left"]{margin-left:-2px;border-left:2px solid -moz-dialogtext}
-toolbarpaletteitem[dragover="right"]{margin-right:-2px;border-right:2px solid -moz-dialogtext}
+toolbarpaletteitem[place="toolbar"]{
+	margin-left:-2px;
+	margin-right:-2px;
+	border-left:2px solid transparent;
+	border-right:2px solid transparent}
+toolbarpaletteitem[dragover="left"]{border-left-color:-moz-dialogtext}
+toolbarpaletteitem[dragover="right"]{border-right-color:-moz-dialogtext}
 
 .toolbarpaletteitem-box{
 	-moz-box-align:center;
@@ -47,11 +47,14 @@ toolbarpaletteitem[dragover="right"]{margin-right:-2px;border-right:2px solid -m
 	border-radius:5px;
 	border:1px solid transparent}
 #palette-box>toolbarpaletteitem:hover{
-	border-color:threedhighlight threedshadow threedshadow threedhighlight}
+	border:1px outset threedface}
 
+toolbarpaletteitem>toolbarseparator{
+	box-shadow:0 0 0 4px -moz-Dialog;
+	margin:2px 4px}
 toolbarpaletteitem>toolbarspring,
 toolbarpaletteitem>toolbarspacer{
-	height:18px;
+	height:20px;
 	min-width:13px;
 	max-width:13px;
 	border:1px dotted graytext}
@@ -59,19 +62,3 @@ toolbarpaletteitem>toolbarspring{
 	min-width:32px;
 	max-width:none;
 	background:url(chrome://global/skin/icons/spring.png) no-repeat center}
-
-/* For SM */
-.collapsed-tray-holder{height:8px;background-color:-moz-Dialog}
-.toolbar-box{-moz-box-align:stretch}
-.toolbar-holder{-moz-box-align:center}
-toolbargrippy{
-	border-radius:5px 5px 0 0;
-	background:url(chrome://global/skin/toolbar-grippy.png) top center no-repeat;
-	width:12px}
-toolbargrippy[tbgrippy-collapsed="true"]{
-	border-radius:5px 0 0 5px;
-	background:url(chrome://global/skin/toolbar-grippy-collapsed.png) center left no-repeat;
-	height:8px;
-	width:24px}
-toolbargrippy:hover{background-color:#CCCCFF}
-toolbargrippy:hover:active{background-color:highlight}

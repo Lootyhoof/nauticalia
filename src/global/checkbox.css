@@ -2,7 +2,7 @@
 
 checkbox{
 	outline-width:0!important;
-	margin:1px 2px;
+	margin:2px;
 	padding:1px;
 	border:2px solid transparent;
 	background-size:contain;
@@ -18,10 +18,9 @@ caption>checkbox{
 	-moz-box-align:center}
 .checkbox-icon{
 	list-style-image:inherit}
-.checkbox-icon[src]{
-	margin:0 2px}
 .checkbox-label{
-	margin:0 1px;
+	margin:0;
+	-moz-margin-start:2px;
 	padding:1px}
 checkbox:not([label])>.checkbox-label-box>.checkbox-label{
 	display:none}
@@ -30,7 +29,7 @@ checkbox:focus{
 	box-shadow:0 0 0 2px #CCCCFF!important}
 
 checkbox:hover:not([disabled="true"]){
-	box-shadow:1px 1px 2.5px -.5px graytext;
+	box-shadow:1px 1px 2px threedshadow;
 	-moz-border-top-colors:threedshadow threedhighlight;
 	-moz-border-left-colors:threedshadow threedhighlight;
 	-moz-border-right-colors:threeddarkshadow threedshadow;
@@ -41,8 +40,8 @@ checkbox:hover:active:not([disabled="true"]){
 	box-shadow:none;
 	-moz-border-top-colors:threeddarkshadow threedshadow;
 	-moz-border-left-colors:threeddarkshadow threedshadow;
-	-moz-border-right-colors:threedhighlight threedshadow;
-	-moz-border-bottom-colors:threedhighlight threedshadow;
+	-moz-border-right-colors:threedshadow threeddarkshadow;
+	-moz-border-bottom-colors:threedshadow threeddarkshadow;
 	background-color:Highlight;
 	color:HighlightText}
 
@@ -54,10 +53,9 @@ checkbox[disabled="true"]{
 	list-style-image:url(chrome://global/skin/checkbox.png);
 	width:14px;
 	height:14px;
-	margin:0 2px 2px 2px;
+	margin:0 0 2px 2px;
 	-moz-image-region:rect(14px 14px 28px 0)}
 .checkbox-check[disabled="true"]{
-	pointer-events:none;
 	-moz-image-region:rect(14px 28px 28px 14px)}
 .checkbox-check[checked="true"]{
 	-moz-image-region:rect(0 14px 14px 0)}

@@ -5,13 +5,13 @@
 .timepicker-text-class{width:8em}
 
 datepicker,timepicker{
+	background:-moz-Field none;
+	color:-moz-FieldText;
 	border:2px solid;
 	-moz-border-top-colors:threedshadow threeddarkshadow;
 	-moz-border-left-colors:threedshadow threeddarkshadow;
 	-moz-border-right-colors:threedhighlight threedshadow;
-	-moz-border-bottom-colors:threedhighlight threedshadow;
-	background:-moz-Field none;
-	color:-moz-FieldText}
+	-moz-border-bottom-colors:threedhighlight threedshadow}
 
 datepicker[type="grid"]{
 	border:0;
@@ -20,6 +20,7 @@ datepicker[type="grid"]{
 
 .datetimepicker-input-subbox{width:1.6em}
 html|*.datetimepicker-input{text-align:center}
+html|*.datetimepicker-input:focus{outline-offset:0;-moz-outline-radius:3px}
 .datetimepicker-separator{padding:0}
 .datetimepicker-year{width:3.2em}
 
@@ -42,28 +43,32 @@ html|*.datetimepicker-input{text-align:center}
 	list-style-image:url(chrome://global/skin/widgets.png);
 	margin:0;
 	background:none;
-	border:1px solid transparent}
-
-.datepicker-dropmarker{
-	border:1px solid transparent;
-	background:-moz-dialog url(chrome://global/skin/menu-bg.png)}
+	border:1px solid;
+	-moz-border-top-colors:transparent;
+	-moz-border-left-colors:transparent;
+	-moz-border-right-colors:transparent;
+	-moz-border-bottom-colors:transparent}
 
 .datepicker-weeklabel{color:threedshadow}
 
-.datepicker-dropmarker:hover,
 .datepicker-button:hover,
 row>.datepicker-gridlabel:hover:not([value=""]),
 .datepicker-button:hover{
-	border-color:threedhighlight threedshadow threedshadow threedhighlight;
+	-moz-border-top-colors:threedhighlight;
+	-moz-border-left-colors:threedhighlight;
+	-moz-border-right-colors:threedshadow;
+	-moz-border-bottom-colors:threedshadow;
 	background:#CCCCFF url(chrome://global/skin/menu-bg.png);
 	color:black}
 
-.datepicker-dropmarker:hover:active,
 .datepicker-button:hover:active,
 row>.datepicker-gridlabel:hover:active:not([value=""]),
 scrollbarbutton:hover:active,
 .datepicker-gridlabel[selected="true"]{
-	border-color:threedshadow threedhighlight threedhighlight threedshadow!important;
+	-moz-border-top-colors:threedshadow!important;
+	-moz-border-left-colors:threedshadow!important;
+	-moz-border-right-colors:threedhighlight!important;
+	-moz-border-bottom-colors:threedhighlight!important;
 	background:Highlight url(chrome://global/skin/menu-bg.png)!important;
 	color:HighlightText}
 

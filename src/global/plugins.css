@@ -1,97 +1,74 @@
 html{
-	font:message-box;
-	background-image:url(chrome://global/skin/gecko.png),linear-gradient(180deg,-moz-dialog,graytext 200%);
-	background-repeat:no-repeat,repeat;
-	background-position:right 90%,left top;
-	background-attachment:fixed,fixed;
-	color:-moz-DialogText}
-body{
-	height:calc(100vh - 7em);
-	position:relative;
-	flex:1;
-	display:flex!important;
-	flex-direction:column;
-	margin:2em 4em;
-	padding:16px;
-	-moz-padding-start:56px!important;
-	border-radius:18px;
-	box-shadow:2px 2px 7px graytext;
-	border:2px solid;
-	-moz-border-top-colors:threedshadow threedhighlight;
-	-moz-border-left-colors:threedshadow threedhighlight;
-	-moz-border-right-colors:threeddarkshadow threedshadow;
-	-moz-border-bottom-colors:threeddarkshadow threedshadow;
-	background:-moz-Dialog url(chrome://mozapps/skin/plugins/pluginGeneric.png) no-repeat 16px 16px}
+	background:threedshadow -moz-linear-gradient(-moz-Dialog -50%,threedshadow 200%) fixed}
 
-h1#plugs{
-	position:absolute;
-	top:16px;
-	margin:0!important}
+body{
+	margin:0;
+	padding:0;
+	font:message-box;
+	background:transparent url(chrome://global/skin/gecko.png) right bottom no-repeat fixed;
+	color:-moz-DialogText}
 
 div#outside{
-	flex:1;
-	margin:3em 0 0 0;
-	overflow:auto;
-	width:auto;
-	border:2px solid;
-	-moz-border-top-colors:ThreeDShadow ThreeDDarkShadow;
-	-moz-border-left-colors:ThreeDShadow ThreeDDarkShadow;
-	-moz-border-right-colors:ThreeDHighLight ThreeDShadow;
-	-moz-border-bottom-colors:ThreeDHighLight ThreeDShadow;
-	background:-moz-dialog;
-	color:-moz-dialogtext}
-
-#findpluginupdates{
-	position:absolute;
-	top:16px;
-	right:16px;
-	margin:0!important;
-	width:40%;
-	text-align:end}
+	width:auto!important;
+	margin:2em 4em!important;
+	border:2px outset threedface;
+	border-radius:8px;
+	background:-moz-Dialog}
 
 div#plugs,div#noplugs,h1#plugs{
-	margin:4px 0;
-	font-size:150%;
-	font-weight:bold;
-	text-align:start}
+	margin:0!important;
+	padding:8px 8px 8px 48px!important;
+	background:transparent url(chrome://mozapps/skin/plugins/pluginGeneric.png) 8px 10px no-repeat;
+	font-size:x-large!important;
+	font-weight:bold!important;
+	text-shadow:1px 1px 4px threedshadow;
+	border-radius:6px 6px 0 0;
+	text-align:left!important}
 
-hr{display:none}
+div#findmore,div#installhelp,div#findpluginupdates{
+	background:threedface;
+	margin:0;
+	padding:2px 8px 6px 48px}
+
+hr{
+	margin:0 -1px;
+	border:1px inset threedface} 
 
 .plugname{
 	margin:0;
-	padding:4px;
+	padding:4px 8px 2px 48px;
 	font-size:130%;
-	font-weight:bold;
-	border-top:2px groove threedface}
-hr+.plugname{
-	border-top:1px outset threedface}
-dl{padding:0 8px}
-dd{-moz-margin-start:7em;text-align:start;word-wrap:break-word}
-dd:last-child{-moz-margin-start:0}
+	font-weight:bold}
+
+dl{margin:0 8px 4px 48px}
+dd{margin:0;padding:0;text-align:start;word-wrap:break-word}
+dd:not(:last-child){-moz-margin-start:7em}
 dd>span{-moz-margin-start:-7em;display:block;float:left;font-weight:600}
 
 table{
 	font:message-box;
-	text-align:start;
-	width:calc(100% - 16px);
-	margin:4px 8px;
+	text-align:left;
+	width:90%;
+	margin:2px 8px 8px 48px;
 	border:1px solid threedshadow;
 	border-spacing:0;
 	border-collapse:collapse;
 	box-shadow:1px 1px 3px threedshadow;
 	background-color:-moz-Field;
 	color:-moz-FieldText}
-td,th{
-	padding:0 2px;
-	border-left:1px solid threedshadow!important}
 th{
+	text-align:start;
+	padding:2px;
 	background-color:-moz-Dialog;
 	color:-moz-DialogText}
 tr{
 	border-bottom:1px solid threedshadow;
 	border-left:1px solid threedshadow;
-	text-align:start}
+	text-align:left}
+td{
+	padding:0 2px;
+	border-right:1px solid threedshadow}
 th.enabled,
 td:nth-child(4){display:none}
 
-a:link,a:hover{color:-moz-nativehyperlinktext}
+a:link,a:hover{color:Highlight}

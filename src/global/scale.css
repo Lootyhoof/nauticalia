@@ -4,31 +4,38 @@
 	-moz-appearance:none!important;
 	width:100px;
 	margin:1px;
-	background-image:linear-gradient(transparent 6px,graytext 7px,threedhighlight 8px,transparent 9px)}
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAFCAYAAACzSkmrAAAAMElEQVR42mNsaGj4zzAKBg1gOXDgwGgojIJRgAswXj5/fLTIGkwR8u/fv9EIGUQAAJyxDChWOiWEAAAAAElFTkSuQmCC) 0% 50% repeat-x}
 
 .scale-slider[orient="vertical"]{
-	background-image:linear-gradient(to right,transparent 6px,graytext 7px,threedhighlight 8px,transparent 9px);
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAABkCAYAAABOx/oaAAAAMUlEQVR42mNoaGj47+Dg8J8BCC6fP/7/379//5kYsIBRwVHBUcFRwVHBUcFRwZEsCAD/tQxmkzoxcwAAAABJRU5ErkJggg==) 50% 0% repeat-y;
 	width:auto;
 	height:100px}
 
 .scale-thumb{
 	width:15px;
 	height:15px;
-	outline-width:0;
-	border:1px solid graytext;
+	outline-color:transparent;
+	border:2px solid;
 	border-radius:100%;
-	box-shadow:-1px -1px graytext inset, 1px 1px threedhighlight inset, 1px 1px 2px threedshadow;
-	background-image:linear-gradient(threedface,threedshadow)}
+	-moz-border-top-colors:ThreeDShadow ThreeDHighLight;
+	-moz-border-left-colors:ThreeDShadow ThreeDHighLight;
+	-moz-border-right-colors:ThreeDDarkShadow ThreeDShadow;
+	-moz-border-bottom-colors:ThreeDDarkShadow ThreeDShadow;
+	background:-moz-Dialog url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAOCAYAAABO3B6yAAAAWElEQVR42sXOMQ2AUAwG4X/v+hyUkYkNEiYcsIAGJGCC4KZWnppCVdwl335qrV0k/R0oM9tJkrTBNMM0otx9ICkiJpJ67wtJmbmSauAk1cBNqoGHVAMv6QPI8ByupeSBbQAAAABJRU5ErkJggg==)}
+.scale-thumb[orient="vertical"]{
+	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAgCAYAAAAi7kmXAAAAQ0lEQVR42mNgYGAwFhAQMADSykAsA8SiQMxvb2/P8///f2kgVgJibSC2BeJQIE4F4jSGUY2jGkc1jmoc1TiqcfhqBAAAIw4OCdQjAgAAAABJRU5ErkJggg==)}
 
-.scale-thumb:hover{background-image:linear-gradient(#CCCCFF,threedshadow)}
-.scale-thumb:hover:active{background-image:linear-gradient(highlight,threedshadow)}
 scale:focus .scale-thumb,
-.scale-thumb:focus{box-shadow:-1px -1px graytext inset, 1px 1px threedhighlight inset, 1px 1px 2px threedshadow,0 0 0 1px #CCCCFF}
+.scale-thumb:focus{outline:2px solid #CCCCFF;-moz-outline-radius:6px}
+.scale-thumb:hover{background-color:#CCCCFF}
+.scale-thumb:hover:active{background-color:Highlight}
 
 .scale-thumb[disabled="true"]{
-	pointer-events:none;
-	box-shadow:none;
-	background:-moz-Dialog!important;
+	-moz-border-top-colors:ThreeDShadow ButtonFace!important;
+	-moz-border-left-colors:ThreeDShadow ButtonFace!important;
+	-moz-border-right-colors:ThreeDShadow ThreeDShadow!important;
+	-moz-border-bottom-colors:ThreeDShadow ThreeDShadow!important;
+	background:-moz-Dialog none!important;
 	color:graytext!important}
 
 #pageZoomScale>.scale-slider{background:none!important}

@@ -38,7 +38,7 @@ grippy{
 	border:1px solid transparent;
 	width:6px;
 	height:113px;
-	background:url(chrome://global/skin/grippy-h.png) no-repeat;
+	background:transparent url(chrome://global/skin/grippy-h.png) no-repeat;
 	cursor:pointer}
 grippy:hover{
 	background-color:#CCCCFF;
@@ -60,7 +60,7 @@ splitter[collapse="after"][state="collapsed"]>grippy:-moz-locale-dir(rtl){
 	background-position:0 center}
 
 splitter[orient="vertical"]>grippy{
-	background:url(chrome://global/skin/grippy-v.png) no-repeat;
+	background:transparent url(chrome://global/skin/grippy-v.png) no-repeat;
 	width:113px;
 	height:6px}
 
@@ -73,9 +73,10 @@ splitter[orient="vertical"][state="collapsed"][collapse="before"]>grippy{
 
 .toolbar-splitter,
 splitter.chromeclass-toolbar-additional{
-	width:4px;
+	width:5px;
 	height:12px;
-	margin:5px 1px;
+	margin-left:1px;
+	margin-right:1px;
 	border-radius:8px;
 	box-shadow:inset 1px 1px 2px threedshadow;
 	border:1px inset threedface}

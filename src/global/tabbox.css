@@ -10,34 +10,37 @@ tabbox{
 
 tabs{
 	border-radius:inherit;
-	background-image:linear-gradient(180deg,threedshadow -200%,-moz-dialog 150%)}
+	background-image:-moz-linear-gradient(threedshadow -200%,-moz-dialog 150%)}
 
 .tabs-left,.tabs-right{
 	min-width:3px;
 	border-bottom:1px solid threedhighlight}
 .tabs-bottom>.tabs-left,.tabs-bottom>.tabs-right{
-	border-bottom-width:0;
+	border-bottom:0;
 	border-top:1px solid threedshadow}
 
 tabpanels{
 	padding:2px;
 	-moz-border-start:1px solid threedhighlight}
-prefpane>tabbox>tabpanels{
-	-moz-border-start-width:0}
+
+tabbox>tabpanels:first-child{
+	border-top:1px solid threedhighlight}
 
 tab{
 	border-radius:9px 9px 0 0;
 	margin-top:5px;
 	box-shadow:0 -1px 1px threedshadow;
 	border:1px solid ThreeDHighLight;
-	-moz-border-end-color:graytext;
+	-moz-border-end-color:threedshadow;
 	padding:2px 3px 0 3px;
-	background:-moz-dialog url(chrome://global/skin/menu-bg.png)}
+	background:threedface url(chrome://global/skin/menu-bg.png)}
+
 tab:hover:not([selected="true"]):not([disabled="true"]){
 	margin-top:3px;
 	padding-bottom:2px;
 	background-color:#CCCCFF;
 	color:black}
+
 tab[selected="true"]{
 	margin-top:3px;
 	padding-top:1px;
@@ -46,9 +49,13 @@ tab[selected="true"]{
 	background-color:-moz-Dialog;
 	color:-moz-DialogText}
 
+tab[disabled="true"]{
+	color:graytext;
+	text-shadow:1px 1px 1px threedhighlight}
+
 .tab-bottom{
 	border-radius:0 0 9px 9px;
-	border:1px solid graytext;
+	border-color:threedshadow;
 	-moz-border-start-color:threedhighlight;
 	margin:0 0 5px 0!important;
 	padding:0 3px 2px 3px!important}
@@ -56,16 +63,11 @@ tab[selected="true"]{
 	margin-bottom:3px!important;
 	padding-top:2px!important}
 .tab-bottom[selected="true"]{
-	margin-bottom:3px!important;
-	padding-top:2px!important;
-	padding-bottom:2px!important;
+	margin-bottom:2px!important;
+	padding-top:3px!important;
+	padding-bottom:1px!important;
 	border-radius:0 0 7px 7px;
-	border-top-color:-moz-Dialog;
-	border-bottom-color:graytext}
-
-tab[disabled="true"]{
-	color:graytext;
-	text-shadow:1px 1px 1px threedhighlight}
+	border-top-color:-moz-Dialog}
 
 /*TABMIXPLUS*/
 .groupbox-panels{
@@ -79,11 +81,3 @@ tabpanels#tabpanId tabbox[value]{
 	-moz-border-left-colors:ThreeDShadow ThreeDDarkShadow!important;
 	-moz-border-right-colors:ThreeDHighLight ThreeDShadow!important;
 	-moz-border-bottom-colors:ThreeDHighLight ThreeDShadow!important}
-
-dialog>tabbox,
-prefpane>tabbox{
-	border-radius:0!important;
-	border-width:0!important;
-	padding:0!important}
-dialog>tabbox>tabpanels{
-	border-width:0!important}

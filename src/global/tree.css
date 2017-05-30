@@ -15,13 +15,13 @@ treechildren::-moz-tree-row{
 	min-height:19px;
 	height:1.3em}
 
-tree>treechildren::-moz-tree-row(even){
-	background-image:linear-gradient(180deg,rgba(160,160,160,.08),rgba(160,160,160,.08))}
-tree.plain[hidecolumnpicker="true"]>treechildren::-moz-tree-row(even){
-	background-image:none}
+treechildren::-moz-tree-row(multicol,odd),
+tree[alternatingbackground="true"] treechildren::-moz-tree-row(odd),
+tree:not([hidecolumnpicker="true"]) treechildren::-moz-tree-row(odd){
+	background-image:-moz-linear-gradient(rgba(160,160,160,.08),rgba(160,160,160,.08))}
 
 treechildren::-moz-tree-row(hover){background-color:#CCCCFF}
-treechildren::-moz-tree-row(selected){background-color:threedshadow}
+treechildren::-moz-tree-row(selected){background-color:graytext}
 treechildren::-moz-tree-row(selected,focus){background-color:highlight}
 treechildren::-moz-tree-row(hover),
 treechildren::-moz-tree-row(selected){
@@ -70,10 +70,7 @@ tree[seltype="text"]>treechildren::-moz-tree-cell-text(active,selected,focus){
 treechildren::-moz-tree-line,
 tree[seltype="cell"]>treechildren::-moz-tree-cell(active,current,focus),
 tree[seltype="text"]>treechildren::-moz-tree-cell-text(active,current,focus){
-	border:1px solid rgba(128,128,128,.5)}
-/*treechildren::-moz-tree-line(selected,focus),
-tree[seltype="cell"]>treechildren::-moz-tree-line(active,selected,focus){
-	border-color:-moz-DialogText}*/
+	border:1px dotted threedshadow}
 tree[selstyle="primary"]>treechildren::-moz-tree-cell-text(primary,selected,current,focus){
 	border:1px solid transparent}
 
