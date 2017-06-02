@@ -66,7 +66,7 @@ td{text-align:start}
 
 #contents{clear:both}
 
-#reset-box{
+#action-box{
 	float:right;
 	margin:4px;
 	padding:4px;
@@ -76,5 +76,19 @@ td{text-align:start}
 	width:30%;
 	text-align:center}
 
-body[dir="rtl"]>#reset-box{float:left}
-#reset-box>h3{margin-top:0}
+#contents{clear: right}
+
+#action-box,#reset-box,#safe-mode-box{display: none}
+
+body[dir="rtl"]>#action-box{float:left}
+#action-box>h3{margin-top:0}
+
+#action-box button{display: block}
+
+#verify-place-result{
+  max-height: 200px;
+  overflow: auto}
+
+.block{display: block}
+
+.hidden{display: none}
