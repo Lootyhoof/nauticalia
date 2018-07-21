@@ -24,8 +24,8 @@ skin	abouthome	nauticalia	abouthome/
 skin	jsterm		nauticalia	jsterm/
 skin	printedit	nauticalia	printedit/
 skin	speeddial	nauticalia	speeddial/
-skin	appver nauticalia	appver/27/ appversion<28.0.0a1
-skin	appver nauticalia	appver/28/ appversion>=28.0.0a1
+skin	appver nauticalia	appver/27/ appversion<28.0.0b1
+skin	appver nauticalia	appver/28/ appversion>=28.0.0b1
 skin	devtools	nauticalia	devtools/
 
 override chrome://browser/skin/autocomplete.css chrome://global/skin/autocomplete.css
