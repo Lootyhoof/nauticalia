@@ -1,0 +1,141 @@
+:root{
+	background:-moz-linear-gradient(-moz-Dialog,graytext 200%) fixed;
+	color:-moz-DialogText}
+
+#newtab-scrollbox::before{
+	content:" ";
+	display:block;
+	position:absolute;
+	bottom:30px;
+	left:30px;
+	width:100px;
+	height:100px;
+	background:url(chrome://global/skin/logo.png) bottom left no-repeat}
+
+#newtab-margin-top,#newtab-margin-bottom{min-height:1px}
+#newtab-horizontal-margin{-moz-box-flex:8}
+.newtab-side-margin{min-width:1px}
+
+#newtab-grid{
+	min-width:400px!important;
+	min-height:200px!important}
+
+.newtab-row:not(:last-child){margin-bottom:20px}
+
+.newtab-title{
+	font-weight:700;
+	text-align:center;
+	padding:4px;
+	border-radius:0 0 12px 12px;
+	background-color:graytext;
+	background-origin:padding-box;
+	background-clip:padding-box;
+	color:threedhighlight}
+
+#newtab-toggle,
+.newtab-control{
+	-moz-appearance:none;
+	width:24px;
+	height:24px;
+	padding:0;
+	border:2px solid transparent;
+	border-radius:12px;
+	background:none center center no-repeat}
+#newtab-toggle{
+	border-radius:5px}
+
+.newtab-cell{
+	box-shadow:1px 1px 1px threedhighlight,-1px -1px 1.5px graytext,1px 1px graytext inset;
+	border-radius:12px}
+.newtab-cell:empty{outline:1px dashed threedface;outline-offset:-1px}
+.newtab-cell:not(:last-child){-moz-margin-end:20px}
+
+.newtab-site{
+	text-decoration:none;
+	-moz-transition:200ms ease-out;
+	-moz-transition-property:top,left,box-shadow,background-color;
+	border-radius:12px}
+
+.newtab-site:hover:not(:active),
+.newtab-site[dragged]{
+	box-shadow:2px 2px 5px graytext,1px 1px 2px graytext,-1px -1px 1px threedhighlight;
+	background-color:-moz-Dialog}
+.newtab-thumbnail{
+	opacity:1;
+	box-shadow:1px 1px 1px graytext inset;
+	border-radius:12px;
+	background-color:-moz-field;
+	background-origin:padding-box;
+	background-clip:padding-box;
+	background-repeat:no-repeat;
+	background-size:cover}
+.newtab-site:hover:not(:active)>.newtab-link>.newtab-thumbnail,
+.newtab-site[dragged]>.newtab-link>.newtab-thumbnail{
+	box-shadow:none!important}
+.newtab-site:hover:active:not([dragged])>.newtab-link>.newtab-thumbnail{
+	opacity:.9;
+	box-shadow:1px 1px 2px graytext inset,2px 2px 4px graytext inset}
+.newtab-site:hover:active:not([dragged])>.newtab-control:not(:hover){
+	display:none}
+
+#newtab-toggle{
+	top:4px!important;
+	right:4px!important;
+	background-image:-moz-image-rect(url(chrome://global/skin/global.png),16,16,32,0)}
+#newtab-toggle[page-disabled]{background-image:-moz-image-rect(url(chrome://global/skin/global.png),272,32,288,16)}
+.newtab-control-block{background-image:-moz-image-rect(url(chrome://global/skin/global.png),272,16,288,0)}
+.newtab-control-pin{background-image:-moz-image-rect(url(chrome://global/skin/global.png),288,32,304,16)}
+
+.newtab-control-pin[pinned]{transform:scaleX(-1)}
+.newtab-control-pin[pinned]:not(:hover){
+	background-color:rgba(160,160,160,.6);
+	-moz-border-top-colors:graytext threedshadow;
+	-moz-border-right-colors:graytext threedshadow;
+	-moz-border-left-colors:threedface threedshadow;
+	-moz-border-bottom-colors:threedface threedshadow;
+	box-shadow:inset -1px 1px 2px threedshadow}
+
+.newtab-control{top:0!important}
+.newtab-control-pin:-moz-locale-dir(ltr),
+.newtab-control-block:-moz-locale-dir(rtl){left:0!important}
+.newtab-control-block:-moz-locale-dir(ltr),
+.newtab-control-pin:-moz-locale-dir(rtl){right:0!important}
+
+#newtab-toggle:hover,
+.newtab-control:hover{
+	-moz-border-top-colors:threedshadow threedhighlight;
+	-moz-border-left-colors:threedshadow threedhighlight;
+	-moz-border-right-colors:graytext threedshadow;
+	-moz-border-bottom-colors:graytext threedshadow;
+	background-color:#CCCCFF}
+#newtab-toggle:hover:active,
+.newtab-control:hover:active{
+	box-shadow:inset 1px 1px 1px threedshadow;
+	-moz-border-top-colors:graytext threedshadow;
+	-moz-border-left-colors:graytext threedshadow;
+	-moz-border-right-colors:threedhighlight threedshadow;
+	-moz-border-bottom-colors:threedhighlight threedshadow;
+	background-color:highlight}
+#newtab-toggle:hover:not([disabled="true"]):not(:active),
+.newtab-control:hover:not([disabled="true"]):not(:active){
+	box-shadow:1px 1px 2px threedshadow}
+
+#newtab-undo-container{
+	-moz-transition:opacity 250ms ease-out;
+	border:1px outset threedface;
+	box-shadow:1px 1px 2px graytext;
+	padding:4px;
+	border-radius:12px}
+#newtab-undo-label{
+	font-weight:600}
+.newtab-undo-button{border-radius:5px}
+#newtab-undo-button{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(496px,32px,512px,16px)}
+#newtab-undo-close-button{
+	list-style-image:url(chrome://global/skin/global.png);
+	-moz-image-region:rect(177px 31px 191px 17px)}
+#newtab-undo-close-button:hover{
+	-moz-image-region:rect(225px 31px 239px 17px)}
+#newtab-undo-close-button:hover:active{
+	-moz-image-region:rect(113px 31px 127px 17px)}
