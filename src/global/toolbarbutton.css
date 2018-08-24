@@ -130,10 +130,9 @@ toolbarbutton[disabled="true"],
 	text-shadow:1px 1px 1px threedhighlight}
 
 toolbarbutton[disabled="true"]>.toolbarbutton-icon,
-toolbarbutton[disabled="true"]>stack>hbox>.toolbarbutton-icon,
-toolbarbutton[disabled="true"]>hbox>vbox>.toolbarbutton-icon{
-	opacity:.5;
-	filter:url(chrome://global/skin/greyscale.svg#greyscale)}
+toolbarbutton[disabled="true"]>*>.toolbarbutton-icon,
+toolbarbutton[disabled="true"]>*>*>.toolbarbutton-icon{
+	filter:opacity(.4) grayscale(1)}
 
 toolbarbutton.toolbar-text-button:hover:active{color:HighlightText!important}
 .toolbarbutton-menubutton-button:hover{box-shadow:none!important}
@@ -189,9 +188,30 @@ toolbarbutton[type="radio"][checked="true"]:not([autoCheck]):not(.share-provider
 	-moz-border-left-colors:threedshadow!important;
 	-moz-border-right-colors:threedhighlight!important;
 	-moz-border-bottom-colors:threedhighlight!important;
-	background:transparent url(chrome://global/skin/highlight.png)!important;
+	background:rgba(255,255,255,.5)!important;
 	color:-moz-DialogText!important}
 toolbarbutton[type="radio"][checked="true"]:not([autoCheck]):not(.share-provider-button):-moz-locale-dir(rtl){
 	-moz-border-right-colors:threedshadow threedshadow!important;
 	-moz-border-left-colors:threedhighlight threedhighlight!important;
 	box-shadow:-1px 1px 2px threedface inset,-1px 1px 1px threedshadow inset}
+
+.toolbarbutton-multiline-text,
+toolbarbutton[wrap="true"]>.toolbarbutton-text{
+	display:none}
+toolbarbutton[wrap="true"]>.toolbarbutton-multiline-text{
+	display:-moz-box}
+	
+.toolbarbutton-badge{
+	-moz-stack-sizing:ignore;
+	font-size:10px;
+	font-weight:bold;
+	margin:-3px 0 0!important;
+	margin-inline-end:-4px!important;
+	min-width:14px;
+	max-width:34px;
+	line-height:10px;
+	text-align:center;
+	border-radius:3px;
+	box-shadow:1px 1px 1px threedshadow, 1px 1px 1px threedhighlight inset;
+	background-color:darkred;
+	color:white}
