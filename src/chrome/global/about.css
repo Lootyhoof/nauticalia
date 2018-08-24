@@ -43,8 +43,8 @@ body.verbose>.entries{
 img{border:0}
 #aboutPageList{
 	width:265px;min-height:256px;
-	margin:0;-moz-margin-start:320px;
-	padding:4px;-moz-padding-start:25px;
+	margin:0;margin-inline-start:320px;
+	padding:4px;padding-inline-start:25px;
 	border:1px inset threedface;
 	background-color:-moz-Field;
 	color:-moz-FieldText}

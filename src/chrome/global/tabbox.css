@@ -21,7 +21,7 @@ tabs{
 
 tabpanels{
 	padding:2px;
-	-moz-border-start:1px solid threedhighlight}
+	border-inline-start:1px solid threedhighlight}
 
 tabbox>tabpanels:first-child{
 	border-top:1px solid threedhighlight}
@@ -31,7 +31,7 @@ tab{
 	margin-top:5px;
 	box-shadow:0 -1px 1px threedshadow;
 	border:1px solid ThreeDHighLight;
-	-moz-border-end-color:threedshadow;
+	border-inline-end-color:threedshadow;
 	padding:2px 3px 0 3px;
 	background:threedface url(chrome://global/skin/menu-bg.png)}
 
@@ -56,7 +56,7 @@ tab[disabled="true"]{
 .tab-bottom{
 	border-radius:0 0 9px 9px;
 	border-color:threedshadow;
-	-moz-border-start-color:threedhighlight;
+	border-inline-start-color:threedhighlight;
 	margin:0 0 5px 0!important;
 	padding:0 3px 2px 3px!important}
 .tab-bottom:hover:not([selected="true"]){

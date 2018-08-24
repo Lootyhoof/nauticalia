@@ -120,7 +120,7 @@ body{
 
 input.name{
 	margin:3px;
-	-moz-margin-end:26px;
+	margin-inline-end:26px;
 	padding:1px;
 	-moz-transition-property:background-color,color,border;
 	-moz-transition-duration:200ms;
@@ -143,7 +143,7 @@ input.name{
 input.name:-moz-placeholder{
 	font-style:italic!important;
 	background:-moz-image-rect(url(chrome://browser/skin/tabview/panorama.png),0,96,16,80) no-repeat;
-	-moz-padding-start:20px}
+	padding-inline-start:20px}
 input.name::-moz-placeholder{
 	opacity:0!important;
 	font-style:italic!important}
@@ -263,7 +263,7 @@ input.name:-moz-locale-dir(rtl){
 .appTabTrayContainer{
 	top:34px;
 	right:1px;
-	-moz-border-start:1px solid threedshadow;
+	border-inline-start:1px solid threedshadow;
 	padding:0 2px;
 	overflow:-moz-hidden-unscrollable;
 	text-align:center;
@@ -343,8 +343,8 @@ input.name:-moz-locale-dir(rtl){
 	line-height:25px;
 	padding:2px;
 	box-shadow:0 0 1px threeddarkshadow;
-	-moz-padding-start:20px;
-	-moz-padding-end:30px;
+	padding-inline-start:20px;
+	padding-inline-end:30px;
 	background:-moz-image-rect(url(chrome://global/skin/global.png),496,32,512,16) no-repeat 2px center}
 
 .undo>.close{
@@ -394,7 +394,7 @@ body,#content{background:none}
 .groupItem{background:rgba(255,255,255,.4) none!important}
 .undo,.thumb,.groupItem{box-shadow:1px 1px 2px rgba(0,0,0,.5)}
 #search{left:-2px}
-#searchbox{-moz-padding-end:1px}
+#searchbox{padding-inline-end:1px}
 .tab-title,input.name{
 	text-shadow:0 0 10px white,0 0 10px white,0 0 10px white,0 0 12px white,0 0 12px white,0 0 12px white}
 }

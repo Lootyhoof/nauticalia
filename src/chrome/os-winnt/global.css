@@ -27,8 +27,8 @@ toolbox:-moz-window-inactive:-moz-system-metric(windows-compositor){
 :root[chromemargin][tabsontop="true"]>#tab-view-deck[selectedIndex="1"]{margin-top:26px}
 
 :root[chromemargin][chromehidden~="toolbar"][tabsontop="true"] #navigator-toolbox{
-	-moz-padding-start:90px;
-	-moz-padding-end:72px}
+	padding-inline-start:90px;
+	padding-inline-end:72px}
 :root[chromemargin][chromehidden~="toolbar"][tabsontop="true"] #titlebar-buttonbox{
 	margin-top:0!important}
 
@@ -36,8 +36,8 @@ toolbox:-moz-window-inactive:-moz-system-metric(windows-compositor){
 	visibility:visible}
 	
 :root[chromemargin] #TabsToolbar[tabsontop="true"]:not([inFullscreen="true"]){
-	-moz-padding-start:110px;
-	-moz-padding-end:72px;
+	padding-inline-start:110px;
+	padding-inline-end:72px;
 	background:none;
 	-moz-box-ordinal-group:1!important}
 	
@@ -66,8 +66,8 @@ toolbar:not(#TabsToolbar):not(#toolbar-menubar){background-color:-moz-dialog}
 #navigator-toolbox[tabsontop="false"]:not([inFullscreen="true"])>#toolbar-menubar[autohide="true"]:not([inactive="true"]){
 	margin-top:-26px;
 	margin-bottom:4px;
-	-moz-padding-start:90px!important;
-	-moz-padding-end:72px!important;
+	padding-inline-start:90px!important;
+	padding-inline-end:72px!important;
 	background-image:none}
 
 /* For classic or Windows 8 */
@@ -79,8 +79,8 @@ toolbar:not(#TabsToolbar):not(#toolbar-menubar){background-color:-moz-dialog}
 #navigator-toolbox[tabsontop="false"]:not([inFullscreen="true"])>#toolbar-menubar[autohide="true"]:not([inactive="true"]):-moz-system-metric(windows-compositor){
 	margin-top:-22px;
 	margin-bottom:0;
-	-moz-border-end-width:0!important;
-	-moz-padding-end:120px!important}
+	border-inline-end-width:0!important;
+	padding-inline-end:120px!important}
 }
 
 @media (-moz-windows-classic) {
@@ -125,7 +125,7 @@ toolbar:not(#TabsToolbar):not(#toolbar-menubar){background-color:-moz-dialog}
 
 @media not all and (-moz-windows-classic) {
   #titlebar-min {
-    -moz-margin-end: 2px;
+    margin-inline-end: 2px;
   }
 }
 
@@ -177,7 +177,7 @@ toolbar:not(#TabsToolbar):not(#toolbar-menubar){background-color:-moz-dialog}
   }
    
   #main-window[sizemode="maximized"] #titlebar-buttonbox {
-    -moz-margin-end: 3px;
+    margin-inline-end: 3px;
   }
 }
 
@@ -300,17 +300,17 @@ toolbar:not(#TabsToolbar):not(#toolbar-menubar){background-color:-moz-dialog}
   (-moz-os-version: windows-win8) {
 	  
   :root[chromemargin] #TabsToolbar[tabsontop="true"]:not([inFullscreen="true"]){
-	-moz-margin-end:7px;
-	-moz-padding-end:0;
-	-moz-border-end-width:0!important;
-	-moz-padding-end:120px!important}
+	margin-inline-end:7px;
+	padding-inline-end:0;
+	border-inline-end-width:0!important;
+	padding-inline-end:120px!important}
 
   :root[sizemode="normal"] #navigator-toolbox>toolbar,
   :root[sizemode="normal"] #appcontent{
-  	-moz-border-start:1px inset threedface;
-  	-moz-border-end:1px inset threedface}
+  	border-inline-start:1px inset threedface;
+  	border-inline-end:1px inset threedface}
   :root[sizemode="normal"] #sidebar-box{
-	-moz-border-start:1px inset threedface}
+	border-inline-start:1px inset threedface}
 	
   #browser-bottombox{
 	background-color:rgba(255,255,255,.5)!important}
@@ -397,10 +397,10 @@ window#facebook-photoupload,#stumble_pref_dialog,#editDialDialog,#editPluginDial
 	margin:1px}
 #topBar>#viewGroup>radio:first-child,
 .paneSelector>radio:first-child{
-	-moz-margin-start:0!important}
+	margin-inline-start:0!important}
 #topBar>#viewGroup>radio:last-child,
 .paneSelector>radio:last-child{
-	-moz-margin-end:0!important}
+	margin-inline-end:0!important}
 	
 #placesToolbar>toolbarbutton:not(:hover):not([disabled="true"]),
 #placesMenu>menu:not(:hover):not([selected="true"]),
@@ -510,12 +510,12 @@ prefwindow[type="child"]>.paneDeckContainer{
 
 .dialog-button,.wizard-button{
 	margin-bottom:0;
-	-moz-margin-start:4px;
-	-moz-margin-end:0;
+	margin-inline-start:4px;
+	margin-inline-end:0;
 	border-radius:5px;
 	-moz-outline-radius:7px}
 .dialog-button:first-child,.wizard-button:first-child{
-	-moz-margin-start:0}
+	margin-inline-start:0}
 
 #clearListButton{
 	border-radius:5px;

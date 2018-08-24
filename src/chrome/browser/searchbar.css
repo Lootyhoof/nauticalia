@@ -19,7 +19,7 @@ searchbar{
 
 .search-go-container{
 	-moz-box-align:center;
-	-moz-border-start:2px solid;
+	border-inline-start:2px solid;
 	-moz-border-left-colors:threedshadow threedhighlight;
 	-moz-border-right-colors:threedshadow threedhighlight;
 	background:-moz-Field url(chrome://global/skin/menu-bg.png)}
@@ -38,7 +38,7 @@ searchbar{
 	filter:url(chrome://global/skin/greyscale.svg#greyscale)}
 
 .searchbar-engine-button{
-	-moz-border-end:1px solid threedshadow;
+	border-inline-end:1px solid threedshadow;
 	background:-moz-Field url(chrome://global/skin/menu-bg.png)}
 .searchbar-engine-button[addengines="true"]{
 	background-color:#00CC00}

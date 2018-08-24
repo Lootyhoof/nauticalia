@@ -2,7 +2,7 @@
 @namespace html url(http://www.w3.org/1999/xhtml);
 
 #appmenu-popup{
-	-moz-margin-start:-1px;
+	margin-inline-start:-1px;
 	padding:2px}
 #appmenu-popup menu,
 #appmenu-popup menuitem{
@@ -11,8 +11,8 @@
 #appmenu-popup menupopup{
 	margin-top:-2px}
 
-#appmenuPrimaryPane{-moz-border-end:1px outset threedface}
-#appmenuSecondaryPane{-moz-border-start:1px outset threedface}
+#appmenuPrimaryPane{border-inline-end:1px outset threedface}
+#appmenuSecondaryPane{border-inline-start:1px outset threedface}
 
 #appmenu-edit-label{
 	-moz-box-flex:1;
@@ -61,8 +61,8 @@
 	background-image:-moz-linear-gradient(threedhighlight -50%,-moz-dialog)!important}
 
 #TabsToolbar[tabsontop="true"][inFullscreen="true"]{
-	-moz-padding-start:0!important;
-	-moz-padding-end:0!important;
+	padding-inline-start:0!important;
+	padding-inline-end:0!important;
 	background-image:-moz-linear-gradient(-moz-dialog 5%,threedshadow 200%)!important}
 
 tabpanels.plain,.tabbrowser-tabbox{border-width:0;border-radius:0}
@@ -78,7 +78,7 @@ tabpanels.plain,.tabbrowser-tabbox{border-width:0;border-radius:0}
 .tabbrowser-tab:-moz-locale-dir(rtl){
 	border-radius:9px 0 0 0}
 .tabbrowser-tab:not(:first-child){
-	-moz-margin-start:2px}
+	margin-inline-start:2px}
 
 .tab-throbber{
 	margin:1px;
@@ -193,7 +193,7 @@ stack>.tabs-alltabs-button:hover:not([open="true"]),
 	background-color:highlight!important}
 
 /*TabMixPlus*/
-.tab-text{border:0!important;-moz-margin-start:0!important}
+.tab-text{border:0!important;margin-inline-start:0!important}
 .tabs-newtab-topbox,
 .tabs-alltabs-topbox,.tabs-alltabs-stack,
 .tabs-closebutton-topbox,.tabs-closebutton-box{
@@ -274,13 +274,13 @@ menuitem[oncommand*="removeTab"]{
 	border-color:threedhighlight threedshadow transparent threedhighlight!important;
 	background-color:-moz-dialog!important}
 .tabbrowser-tab[selected="true"]>.tab-icon-image{
-	-moz-margin-start:0!important}
+	margin-inline-start:0!important}
 
 .tabbrowser-tab:not([pinned]){
 	min-width:40px}
 .tabbrowser-tab[pinned]{
-	-moz-padding-start:2px!important;
-	-moz-padding-end:4px!important}
+	padding-inline-start:2px!important;
+	padding-inline-end:4px!important}
 
 .tabbrowser-tab[pinned][titlechanged]:not([selected="true"]){
 	opacity:1!important;
@@ -397,14 +397,14 @@ panel[dimmed="true"]{
 	opacity:.5}
 
 #zoom-out-button{
-	-moz-margin-end:0;
+	margin-inline-end:0;
 	list-style-image:url(chrome://global/skin/small.png);
 	-moz-image-region:rect(384px,24px,408px,0)}
 toolbar[iconsize="small"]>#zoom-controls>#zoom-out-button{
 	list-style-image:url(chrome://global/skin/global.png);
 	-moz-image-region:rect(512px,16px,528px,0)}
 #zoom-in-button{
-	-moz-margin-end:0;
+	margin-inline-end:0;
 	list-style-image:url(chrome://global/skin/small.png);
 	-moz-image-region:rect(384px,48px,408px,24px)}
 toolbar[iconsize="small"]>#zoom-controls>#zoom-in-button{
@@ -546,7 +546,7 @@ stack>.tabs-alltabs-button>.toolbarbutton-text,
 	border:1px solid transparent}
 
 .splitmenu-menu{
-	-moz-margin-start:-1px}
+	margin-inline-start:-1px}
 
 .splitmenu-menuitem,
 .splitmenu-menu:-moz-locale-dir(rtl){
