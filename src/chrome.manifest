@@ -1,29 +1,30 @@
-skin	communicator	nauticalia	communicator/
-skin	global		nauticalia	global/
-skin	browser		nauticalia	browser/
-skin	inspector	nauticalia	inspector/
-skin	mozapps		nauticalia	mozapps/
-skin	help		nauticalia	help/
-skin	downbar		nauticalia	downbar/
-skin	reporter	nauticalia	reporter/
-skin	offline		nauticalia	offline/
-skin	quicknote	nauticalia	quicknote/
-skin	tabprefs	nauticalia	tabprefs/
-skin	dataman		nauticalia	dataman/
-skin	dlman		nauticalia	dlman/
-skin	desktop		nauticalia	desktop/
-skin	locationbar2	nauticalia	locationbar2/
-skin	downloadmgr	nauticalia	downloadmgr/
-skin	favres		nauticalia	favres/
-skin	os		nauticalia	os-linux/
-skin	os		nauticalia	os-darwin/	os=Darwin
-skin	os		nauticalia	os-winnt/	os=WINNT
-skin	graphical-timeline nauticalia	gt/
-skin	imagetoolbar	nauticalia	imagetoolbar/
-skin	abouthome	nauticalia	abouthome/
-skin	jsterm		nauticalia	jsterm/
-skin	printedit	nauticalia	printedit/
-skin	speeddial	nauticalia	speeddial/
-skin	devtools	nauticalia	devtools/
+skin	abouthome	nauticalia	chrome/abouthome/
+skin	browser		nauticalia	chrome/browser/
+skin	communicator	nauticalia	chrome/communicator/
+skin	devtools	nauticalia	chrome/devtools/
+skin	global		nauticalia	chrome/global/
+skin	mozapps		nauticalia	chrome/mozapps/
+
+skin	os		nauticalia	chrome/os/linux/
+skin	os		nauticalia	chrome/os/darwin/	os=Darwin
+skin	os		nauticalia	chrome/os/winnt/	os=WINNT
 
 override chrome://browser/skin/autocomplete.css chrome://global/skin/autocomplete.css
+
+# Add-on styles
+
+skin	printedit	nauticalia	chrome/addon/printedit/
+skin	speeddial	nauticalia	chrome/addon/speeddial/
+skin	graphical-timeline nauticalia	chrome/addon/gt/
+skin	imagetoolbar	nauticalia	chrome/addon/imagetoolbar/
+skin	downbar		nauticalia	chrome/addon/downbar/
+skin	offline		nauticalia	chrome/addon/offline/
+skin	quicknote	nauticalia	chrome/addon/quicknote/
+skin	tabprefs	nauticalia	chrome/addon/tabprefs/
+skin	dataman		littlemoon	chrome/dataman/
+skin	dlman		nauticalia	chrome/addon/dlman/
+skin	desktop		nauticalia	chrome/addon/desktop/
+skin	locationbar2	nauticalia	chrome/addon/locationbar2/
+skin	downloadmgr	nauticalia	chrome/addon/downloadmgr/
+skin	favres		nauticalia	chrome/addon/favres/
+skin	inspector	nauticalia	chrome/addon/inspector/
