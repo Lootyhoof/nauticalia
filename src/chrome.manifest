@@ -1,4 +1,3 @@
-skin	abouthome	nauticalia	chrome/abouthome/
 skin	browser		nauticalia	chrome/browser/
 skin	communicator	nauticalia	chrome/communicator/
 skin	devtools	nauticalia	chrome/devtools/
@@ -13,6 +12,7 @@ override chrome://browser/skin/autocomplete.css chrome://global/skin/autocomplet
 
 # Add-on styles
 
+skin	abouthome	nauticalia	chrome/addon/abouthome/
 skin	printedit	nauticalia	chrome/addon/printedit/
 skin	speeddial	nauticalia	chrome/addon/speeddial/
 skin	graphical-timeline nauticalia	chrome/addon/gt/
