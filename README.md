@@ -1,10 +1,12 @@
 # Nauticalia
 ![Preview](http://i64.tinypic.com/5wjarm.png)
 
-Fork of the theme [Nautipolis](https://addons.mozilla.org/firefox/addon/nautipolis-for-firefox/) by Alfred Kayser for Pale Moon.
+Fork of the theme "Nautipolis" by Alfred Kayser for Pale Moon.
 
 ## Building
 Simply download the contents of the "src" folder  and pack the contents into a .zip file. Then, rename the file to .xpi and drag into the browser.
 
+On Unix systems (or Windows 10, with [WSL](https://docs.microsoft.com/en-us/windows/wsl/about)) you can optionally run `build.sh` instead. Running this as-is will produce a .xpi file ending in `-dev`, and if run from the command line and appending a number (e.g. `./build.sh 2`) will append that number to the filename instead.
+
 ## Download
-You can grab the latest release either from the Releases section of this repository, or the [Pale Moon Add-Ons Site](https://addons.palemoon.org/themes/complete/nauticalia/).
+You can grab the latest release either from the Releases section of this repository, or the [Pale Moon Add-Ons Site](https://addons.palemoon.org/addon/nauticalia/).
