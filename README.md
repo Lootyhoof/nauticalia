@@ -1,5 +1,5 @@
 # Nauticalia
-![Preview](http://i64.tinypic.com/5wjarm.png)
+![Preview](https://i.imgur.com/93Y23n2.png)
 
 Fork of the theme "Nautipolis" by Alfred Kayser for Pale Moon.
 
