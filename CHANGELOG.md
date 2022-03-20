@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.11.0
+- add mixed-mode SSL styling
+- support Pale Moon 30
+
 ### 1.10.2
 - make selected text legible in devtools
 
